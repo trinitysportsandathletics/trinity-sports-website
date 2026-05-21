@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Participation Policy, Waiver & Media Release | Trinity Sports & Athletics</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #031233;
+    --orange: #fb9429;
+    --sky: #61d6f9;
+    --blue: #204e8b;
+    --slate: #9eadaf;
+    --white: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Barlow', sans-serif;
+    background: var(--navy);
+    color: var(--white);
+  }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    height: 68px;
+    background: rgba(3,18,51,0.97);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(97,214,249,0.15);
+  }
+
+  .nav-logo img {
+    height: 50px;
+    width: auto;
+    mix-blend-mode: screen;
+  }
+
+  .nav-back {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--slate);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.2s;
+  }
+
+  .nav-back:hover { color: var(--sky); }
+
+  /* HERO */
+  .page-hero {
+    background: linear-gradient(135deg, #020e28 0%, var(--blue) 100%);
+    border-bottom: 3px solid var(--orange);
+    padding: 60px 5% 48px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .page-hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 300px; height: 300px;
+    background: rgba(97,214,249,0.04);
+    border-radius: 50%;
+  }
+
+  .page-hero-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .page-hero-label::before {
+    content: '';
+    display: block;
+    width: 28px; height: 2px;
+    background: var(--orange);
+  }
+
+  .page-hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(36px, 6vw, 64px);
+    letter-spacing: 2px;
+    line-height: 1;
+    margin-bottom: 16px;
+    color: var(--white);
+  }
+
+  .page-hero h1 span { color: var(--sky); }
+
+  .page-hero-sub {
+    font-size: 16px;
+    color: var(--slate);
+    max-width: 640px;
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+
+  .effective-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(97,214,249,0.1);
+    border: 1px solid rgba(97,214,249,0.3);
+    color: var(--sky);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border-radius: 4px;
+  }
+
+  /* LAYOUT */
+  .policy-wrap {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5% 80px;
+  }
+
+  /* SIDEBAR TOC */
+  .toc {
+    padding: 48px 32px 48px 0;
+    position: sticky;
+    top: 68px;
+    height: calc(100vh - 68px);
+    overflow-y: auto;
+    border-right: 1px solid rgba(97,214,249,0.1);
+  }
+
+  .toc-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--slate);
+    margin-bottom: 20px;
+  }
+
+  .toc-list { list-style: none; }
+
+  .toc-list li { margin-bottom: 4px; }
+
+  .toc-list a {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    display: block;
+    padding: 6px 12px;
+    border-radius: 4px;
+    border-left: 2px solid transparent;
+    transition: all 0.2s;
+    line-height: 1.4;
+  }
+
+  .toc-list a:hover,
+  .toc-list a.active {
+    color: var(--sky);
+    border-left-color: var(--sky);
+    background: rgba(97,214,249,0.05);
+  }
+
+  /* CONTENT */
+  .policy-content {
+    padding: 48px 0 48px 48px;
+  }
+
+  /* SECTION */
+  .policy-section {
+    margin-bottom: 64px;
+    scroll-margin-top: 88px;
+  }
+
+  .section-number {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 8px;
+  }
+
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    letter-spacing: 1px;
+    color: var(--white);
+    margin-bottom: 8px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid rgba(251,148,41,0.3);
+  }
+
+  .subsection-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--sky);
+    margin: 28px 0 12px;
+  }
+
+  .policy-intro {
+    font-size: 15px;
+    color: var(--slate);
+    line-height: 1.75;
+    margin-bottom: 20px;
+  }
+
+  .policy-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .policy-list li {
+    font-size: 15px;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.75;
+    padding: 10px 0 10px 24px;
+    border-bottom: 1px solid rgba(97,214,249,0.07);
+    position: relative;
+  }
+
+  .policy-list li:last-child { border-bottom: none; }
+
+  .policy-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--orange);
+    font-size: 11px;
+    top: 13px;
+  }
+
+  .policy-list li strong { color: var(--white); font-weight: 600; }
+
+  /* EXAMPLE BOX */
+  .example-box {
+    background: rgba(32,78,139,0.2);
+    border-left: 3px solid var(--sky);
+    border-radius: 0 6px 6px 0;
+    padding: 16px 20px;
+    margin: 16px 0;
+    font-size: 14px;
+    color: var(--slate);
+    line-height: 1.7;
+    font-style: italic;
+  }
+
+  .example-box strong { color: var(--sky); font-style: normal; }
+
+  /* WARNING BOX — waiver */
+  .warning-box {
+    background: rgba(251,148,41,0.08);
+    border: 1px solid rgba(251,148,41,0.3);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.7;
+  }
+
+  .warning-box strong { color: var(--orange); }
+
+  /* PRICING TABLE */
+  .pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0 24px;
+    font-size: 15px;
+  }
+
+  .pricing-table th {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--slate);
+    text-align: left;
+    padding: 10px 16px;
+    border-bottom: 1px solid rgba(97,214,249,0.2);
+  }
+
+  .pricing-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(97,214,249,0.07);
+    color: rgba(255,255,255,0.8);
+    vertical-align: top;
+  }
+
+  .pricing-table tr:last-child td { border-bottom: none; }
+
+  .pricing-table td:first-child { color: var(--white); font-weight: 600; }
+
+  .price-tag {
+    display: inline-block;
+    background: rgba(251,148,41,0.15);
+    color: var(--orange);
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 3px;
+    font-size: 14px;
+  }
+
+  /* SIGNATURE BLOCK */
+  .signature-block {
+    background: rgba(32,78,139,0.15);
+    border: 1px solid rgba(97,214,249,0.2);
+    border-radius: 8px;
+    padding: 32px;
+    margin-top: 24px;
+  }
+
+  .sig-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--slate);
+    margin-bottom: 24px;
+  }
+
+  .sig-line {
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+
+  .sig-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .sig-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--slate);
+  }
+
+  .sig-underline {
+    height: 1px;
+    background: rgba(255,255,255,0.3);
+    width: 100%;
+    margin-top: 28px;
+  }
+
+  /* REGISTER CTA */
+  .policy-cta {
+    background: linear-gradient(135deg, var(--blue) 0%, #0d2d5e 100%);
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    margin-top: 64px;
+    border: 1px solid rgba(97,214,249,0.2);
+  }
+
+  .policy-cta h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    color: var(--white);
+  }
+
+  .policy-cta p {
+    font-size: 15px;
+    color: var(--slate);
+    margin-bottom: 24px;
+    line-height: 1.6;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    background: var(--orange);
+    color: var(--navy);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 14px 36px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .btn-primary:hover { background: #ffa84a; }
+
+  /* FOOTER */
+  footer {
+    background: #010b1e;
+    border-top: 1px solid rgba(97,214,249,0.1);
+    padding: 32px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  footer img {
+    height: 52px;
+    mix-blend-mode: screen;
+  }
+
+  .footer-copy {
+    font-size: 13px;
+    color: rgba(255,255,255,0.3);
+  }
+
+  .footer-contact a {
+    font-size: 14px;
+    color: var(--sky);
+    text-decoration: none;
+    margin-left: 20px;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .policy-wrap {
+      grid-template-columns: 1fr;
+    }
+
+    .toc {
+      position: static;
+      height: auto;
+      border-right: none;
+      border-bottom: 1px solid rgba(97,214,249,0.1);
+      padding: 32px 0 24px;
+      overflow: visible;
+    }
+
+    .toc-list { display: flex; flex-wrap: wrap; gap: 8px; }
+    .toc-list li { margin-bottom: 0; }
+    .toc-list a { padding: 6px 10px; border-left: none; border: 1px solid rgba(97,214,249,0.2); border-radius: 4px; }
+
+    .policy-content { padding: 32px 0; }
+    .pricing-table { font-size: 14px; }
+    .pricing-table th, .pricing-table td { padding: 8px 10px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="logo.png" alt="Trinity Sports & Athletics" />
+  </a>
+  <a href="index.html" class="nav-back">← Back to Website</a>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero">
+  <p class="page-hero-label">Legal & Participation Documents</p>
+  <h1>Participation Policy, <span>Waiver</span> &amp; Media Release</h1>
+  <p class="page-hero-sub">This policy applies to all Trinity Sports & Athletics programs. By registering for any TSA service, the parent/guardian and athlete acknowledge and agree to all terms below.</p>
+  <span class="effective-badge">✓ Effective January 2024 &nbsp;|&nbsp; All Programs & Services</span>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="policy-wrap">
+
+  <!-- SIDEBAR TOC -->
+  <aside class="toc">
+    <p class="toc-title">On This Page</p>
+    <ul class="toc-list">
+      <li><a href="#fees">1. Program Fees & Pricing</a></li>
+      <li><a href="#payment">2. Payment Policy</a></li>
+      <li><a href="#attendance">3. Attendance & Sessions</a></li>
+      <li><a href="#refunds">4. Refund Policy</a></li>
+      <li><a href="#cancellation">5. Cancellation Policy</a></li>
+      <li><a href="#specials">6. Specials & Promotions</a></li>
+      <li><a href="#waiver">7. Waiver of Liability</a></li>
+      <li><a href="#media">8. Photo & Media Release</a></li>
+      <li><a href="#authorization">9. Authorization & Agreement</a></li>
+    </ul>
+  </aside>
+
+  <!-- POLICY CONTENT -->
+  <main class="policy-content">
+
+    <!-- SECTION 1 -->
+    <section class="policy-section" id="fees">
+      <p class="section-number">Section 1</p>
+      <h2 class="section-title">Program Fees & Pricing</h2>
+
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>Program</th>
+            <th>Rate</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Group Classes</td>
+            <td><span class="price-tag">$160/mo</span></td>
+            <td>8 sessions per month. Youth Development (Grades 3–7) & Competitive Development (Grades 8–12).</td>
+          </tr>
+          <tr>
+            <td>Group Classes — Sibling</td>
+            <td><span class="price-tag">$110/mo</span></td>
+            <td>Each additional sibling enrolled in group classes.</td>
+          </tr>
+          <tr>
+            <td>Private/Semi-Private — 8 Sessions</td>
+            <td><span class="price-tag">$310/mo</span></td>
+            <td>8 private/semi-private sessions, 1 hour each.</td>
+          </tr>
+          <tr>
+            <td>Private/Semi-Private — 4 Sessions</td>
+            <td><span class="price-tag">$210/mo</span></td>
+            <td>4 private/semi-private sessions, 1 hour each.</td>
+          </tr>
+          <tr>
+            <td>Private/Semi-Private — Sibling</td>
+            <td><span class="price-tag">$110/mo</span></td>
+            <td>Each additional sibling enrolled in private/semi-private training.</td>
+          </tr>
+          <tr>
+            <td>Team Training</td>
+            <td><span class="price-tag">Custom</span></td>
+            <td>Pricing based on team size, session frequency, and training needs. Contact Coach Carter for a quote.</td>
+          </tr>
+          <tr>
+            <td>Card Processing Fee</td>
+            <td><span class="price-tag">$10/child</span></td>
+            <td>Included in the monthly total listed above. No additional charges will be applied.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- SECTION 2 -->
+    <section class="policy-section" id="payment">
+      <p class="section-number">Section 2</p>
+      <h2 class="section-title">Payment Policy</h2>
+      <ul class="policy-list">
+        <li>All payments are due <strong>in advance of participation.</strong></li>
+        <li>All training plans operate on <strong>monthly subscription contracts.</strong></li>
+        <li>Payments are <strong>auto-drafted on the 1st or 15th</strong> of each month based on your enrollment date.</li>
+        <li>Your first month may be <strong>pro-rated</strong> depending on your start date. Regular monthly billing begins the following month.</li>
+        <li>Accepted payment methods: <strong>debit or credit card only.</strong> No cash or check payments.</li>
+        <li>Families with multiple children may request a <strong>split-payment plan</strong> (half on the 1st, half on the 15th). Split payments are not available for single-child enrollments.</li>
+        <li><strong>EFA (Educational Funds Account)</strong> payments are accepted. EFA clients will be scheduled after invoice approval through ClassWallet.</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 3 -->
+    <section class="policy-section" id="attendance">
+      <p class="section-number">Section 3</p>
+      <h2 class="section-title">Attendance & Session Policy</h2>
+
+      <p class="subsection-title">Group Classes</p>
+      <ul class="policy-list">
+        <li>Sessions are held on <strong>scheduled days and times only.</strong></li>
+        <li>Missed sessions will <strong>not be rescheduled, credited, or carried over</strong> into subsequent months.</li>
+        <li>Purchased sessions must be used within the <strong>same calendar month</strong> in which they are purchased. Unused sessions expire at the end of the month and are forfeited.</li>
+      </ul>
+      <div class="example-box">
+        <strong>Example:</strong> If 8 sessions are purchased mid-month and only 3 are attended, the 5 unused sessions expire at month-end and cannot be carried over, refunded, or credited.
+      </div>
+
+      <p class="subsection-title">Private/Semi-Private Training</p>
+      <ul class="policy-list">
+        <li>If a session is missed for any reason, it is the <strong>client's responsibility</strong> to coordinate a make-up session within the same month.</li>
+        <li>Sessions not made up within the month <strong>will not roll over or accrue.</strong></li>
+        <li>Make-up sessions are <strong>not guaranteed</strong> and are subject to Coach Carter's availability.</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 4 -->
+    <section class="policy-section" id="refunds">
+      <p class="section-number">Section 4</p>
+      <h2 class="section-title">Refund Policy</h2>
+      <ul class="policy-list">
+        <li><strong>No refunds will be issued</strong> for any reason once a session, package, or monthly subscription has been purchased.</li>
+        <li>Sessions and packages are <strong>non-transferable</strong> and may not be applied toward other TSA programs.</li>
+        <li>We understand life happens. If extenuating circumstances arise, please contact us directly — we will make every reasonable effort to accommodate make-up opportunities where possible.</li>
+        <li>No refunds will be issued on <strong>specials, promotional offers, or discounted training packages.</strong></li>
+      </ul>
+    </section>
+
+    <!-- SECTION 5 -->
+    <section class="policy-section" id="cancellation">
+      <p class="section-number">Section 5</p>
+      <h2 class="section-title">Cancellation Policy</h2>
+      <ul class="policy-list">
+        <li>A <strong>30-day written notice</strong> is required to cancel your subscription.</li>
+        <li><strong>Verbal cancellation notices will not be accepted.</strong></li>
+        <li>Written notice may be submitted via email to your TSA contact or through the cancellation request form on the website.</li>
+        <li>Payments will continue until a valid written notice is <strong>received and confirmed.</strong></li>
+      </ul>
+    </section>
+
+    <!-- SECTION 6 -->
+    <section class="policy-section" id="specials">
+      <p class="section-number">Section 6</p>
+      <h2 class="section-title">Specials & Promotions</h2>
+      <ul class="policy-list">
+        <li>All specials, discounts, and promotional rates must be used <strong>within the month they are purchased.</strong></li>
+        <li>Unused sessions from promotional packages <strong>do not roll over.</strong></li>
+        <li><strong>No refunds</strong> on any specials, promotional offers, or discounted packages.</li>
+        <li>Make-up sessions for promotional packages are <strong>not guaranteed</strong> and are subject to availability.</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 7 — WAIVER -->
+    <section class="policy-section" id="waiver">
+      <p class="section-number">Section 7</p>
+      <h2 class="section-title">Waiver of Liability & Assumption of Risk</h2>
+
+      <div class="warning-box">
+        <strong>Please read this section carefully.</strong> This is a legally binding waiver. By enrolling with Trinity Sports & Athletics LLC, the parent/guardian acknowledges and agrees to the following terms on behalf of themselves and their athlete.
+      </div>
+
+      <ul class="policy-list">
+        <li>Physical activity and athletic training involve <strong>inherent risks of injury,</strong> including but not limited to sprains, strains, fractures, and other bodily harm. The parent/guardian voluntarily assumes all such risks on behalf of their athlete.</li>
+        <li>The parent/guardian, on behalf of themselves and their athlete, hereby <strong>releases, waives, and discharges Trinity Sports & Athletics LLC,</strong> its owner(s), coaches, employees, agents, and any facility used for training (collectively, "TSA") from any and all liability, claims, demands, or causes of action arising out of or related to any loss, damage, or injury — <strong>including death</strong> — that may be sustained by the athlete during participation in any TSA program or while on or about the premises used for training.</li>
+        <li>This waiver applies <strong>regardless of whether the injury or loss results from the negligence</strong> of TSA, its coaches, employees, or agents, or from any other cause.</li>
+        <li>The parent/guardian acknowledges that <strong>TSA does not provide health insurance coverage</strong> for athletes and strongly recommends that all participants maintain adequate personal health and accident insurance prior to participation.</li>
+        <li>This release is intended to be as <strong>broad and inclusive as permitted by applicable law.</strong> If any portion is held invalid, the remainder of the waiver shall continue in full legal force and effect.</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 8 — MEDIA -->
+    <section class="policy-section" id="media">
+      <p class="section-number">Section 8</p>
+      <h2 class="section-title">Photo & Media Release Authorization</h2>
+      <p class="policy-intro">By enrolling with Trinity Sports & Athletics LLC, the parent/guardian acknowledges and agrees to the following:</p>
+      <ul class="policy-list">
+        <li>I hereby grant Trinity Sports & Athletics LLC and its representatives <strong>permission to photograph, video record, or otherwise capture</strong> my athlete's image, likeness, and/or voice during participation in any TSA program, event, or activity.</li>
+        <li>I authorize TSA to use such photos, videos, and recordings for <strong>promotional and marketing purposes,</strong> including but not limited to social media platforms, the TSA website, flyers, advertisements, and other marketing materials — without compensation or further notice.</li>
+        <li>I understand that any content posted to TSA's social media or marketing channels <strong>may be shared publicly</strong> and that TSA retains the right to use this content at its discretion.</li>
+        <li>If I do <strong>NOT</strong> wish to authorize the use of my athlete's image or likeness for marketing purposes, I must <strong>notify TSA in writing at the time of enrollment.</strong> Absent written objection, enrollment constitutes consent to this release.</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 9 — AUTHORIZATION -->
+    <section class="policy-section" id="authorization">
+      <p class="section-number">Section 9</p>
+      <h2 class="section-title">Authorization & Agreement</h2>
+      <p class="policy-intro">By enrolling with Trinity Sports & Athletics LLC and signing below, I confirm that:</p>
+      <ul class="policy-list">
+        <li>I have <strong>read and understand</strong> all policies outlined in this document.</li>
+        <li>I authorize Trinity Sports & Athletics LLC to process <strong>recurring monthly payments</strong> according to the invoice provided.</li>
+        <li>I understand payments will continue until a <strong>written 30-day cancellation notice</strong> is submitted and confirmed.</li>
+        <li>I acknowledge that unused sessions, missed sessions, and purchased packages are <strong>non-refundable.</strong></li>
+        <li>I <strong>voluntarily assume all risks of injury</strong> associated with athletic participation and release TSA, its coaches, employees, and facilities from any and all liability as outlined in Section 7.</li>
+        <li>I <strong>authorize Trinity Sports & Athletics LLC</strong> to use my athlete's image and likeness for promotional and marketing purposes as outlined in Section 8, unless I have submitted a written objection.</li>
+        <li>I agree these terms apply to <strong>all current and future TSA services</strong> my athlete(s) participate in.</li>
+      </ul>
+
+      <div class="signature-block">
+        <p class="sig-title">Signature Block — Physical / Printed Copy</p>
+        <div class="sig-line">
+          <div class="sig-field">
+            <span class="sig-label">Parent / Guardian Printed Name</span>
+            <div class="sig-underline"></div>
+          </div>
+          <div class="sig-field" style="max-width:180px;">
+            <span class="sig-label">Date</span>
+            <div class="sig-underline"></div>
+          </div>
+        </div>
+        <div class="sig-line">
+          <div class="sig-field">
+            <span class="sig-label">Parent / Guardian Signature</span>
+            <div class="sig-underline"></div>
+          </div>
+          <div class="sig-field" style="max-width:180px;">
+            <span class="sig-label">Date</span>
+            <div class="sig-underline"></div>
+          </div>
+        </div>
+        <div class="sig-line">
+          <div class="sig-field">
+            <span class="sig-label">Athlete Name(s)</span>
+            <div class="sig-underline"></div>
+          </div>
+          <div class="sig-field" style="max-width:220px;">
+            <span class="sig-label">Program</span>
+            <div class="sig-underline"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="policy-cta">
+      <h3>Ready to Register?</h3>
+      <p>Return to the website to register your athlete. You'll be asked to review and e-sign this policy as part of the registration form.</p>
+      <a href="https://form.jotform.com/261406948653061" target="_blank" class="btn-primary">Register Now</a>
+    </div>
+
+  </main>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <a href="index.html"><img src="logo.png" alt="Trinity Sports & Athletics" /></a>
+  <p class="footer-copy">© 2025 Trinity Sports & Athletics LLC. All rights reserved.</p>
+  <div class="footer-contact">
+    <a href="tel:8709554746">📞 870-955-4746</a>
+    <a href="https://www.trinitysportsandathletics.com">🌐 trinitysportsandathletics.com</a>
+  </div>
+</footer>
+
+<script>
+  // Highlight active TOC item on scroll
+  const sections = document.querySelectorAll('.policy-section');
+  const tocLinks = document.querySelectorAll('.toc-list a');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        tocLinks.forEach(link => link.classList.remove('active'));
+        const active = document.querySelector(`.toc-list a[href="#${entry.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+
+  sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>
