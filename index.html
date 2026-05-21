@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trinity Sports & Athletics | Train. Compete. Excel.</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700;900&family=Barlow+Condensed:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #031233;
+    --orange: #fb9429;
+    --sky: #61d6f9;
+    --blue: #204e8b;
+    --slate: #9eadaf;
+    --black: #000000;
+    --white: #ffffff;
+    --section-pad: 100px 5%;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Barlow', sans-serif;
+    background: var(--navy);
+    color: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ===== NAV ===== */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    height: 72px;
+    background: rgba(3,18,51,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(97,214,249,0.15);
+  }
+
+  .nav-logo {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-logo img {
+    height: 54px;
+    width: auto;
+    display: block;
+    /* knock out the black background */
+    mix-blend-mode: screen;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--slate);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--sky); }
+
+  .nav-cta {
+    background: var(--orange) !important;
+    color: var(--navy) !important;
+    padding: 10px 20px !important;
+    border-radius: 4px;
+    font-weight: 700 !important;
+  }
+
+  .nav-cta:hover { background: #ffa84a !important; }
+
+  /* ===== HERO ===== */
+  #hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 120px 5% 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 50% at 80% 50%, rgba(32,78,139,0.35) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 60% at 20% 80%, rgba(97,214,249,0.08) 0%, transparent 60%);
+  }
+
+  .hero-grid-overlay {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(97,214,249,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(97,214,249,0.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .hero-accent-line {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 4px;
+    background: linear-gradient(90deg, var(--orange) 0%, var(--sky) 100%);
+  }
+
+  .hero-content { position: relative; z-index: 2; max-width: 900px; }
+
+  .hero-eyebrow {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--sky);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 40px; height: 2px;
+    background: var(--sky);
+  }
+
+  .hero-h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(72px, 12vw, 140px);
+    line-height: 0.92;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+
+  .hero-h1 .accent { color: var(--orange); }
+  .hero-h1 .sky { color: var(--sky); }
+
+  .hero-sub {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--slate);
+    max-width: 560px;
+    line-height: 1.6;
+    margin-bottom: 48px;
+    margin-top: 20px;
+  }
+
+  .hero-sports {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--slate);
+    margin-bottom: 44px;
+    text-transform: uppercase;
+  }
+
+  .hero-sports span { color: var(--white); margin: 0 6px; }
+
+  .btn-primary {
+    display: inline-block;
+    background: var(--orange);
+    color: var(--navy);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 16px 36px;
+    border-radius: 4px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .btn-primary:hover { background: #ffa84a; transform: translateY(-2px); }
+
+  .btn-secondary {
+    display: inline-block;
+    background: transparent;
+    color: var(--white);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 15px 36px;
+    border-radius: 4px;
+    border: 1.5px solid rgba(255,255,255,0.3);
+    text-decoration: none;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .btn-secondary:hover { border-color: var(--sky); color: var(--sky); }
+
+  .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+
+  /* ===== EFA BADGE ===== */
+  .efa-banner {
+    background: linear-gradient(135deg, var(--blue) 0%, #0d2d5e 100%);
+    border-top: 3px solid var(--sky);
+    border-bottom: 3px solid var(--sky);
+    padding: 28px 5%;
+    text-align: center;
+  }
+
+  .efa-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .efa-badge {
+    background: var(--sky);
+    color: var(--navy);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 3px;
+    padding: 10px 22px;
+    border-radius: 4px;
+  }
+
+  .efa-text {
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--white);
+    max-width: 600px;
+    line-height: 1.5;
+  }
+
+  .efa-text strong { color: var(--sky); }
+
+  /* ===== SECTION HEADERS ===== */
+  .section-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-label::before {
+    content: '';
+    display: block;
+    width: 30px; height: 2px;
+    background: var(--orange);
+  }
+
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+  }
+
+  .section-title .accent { color: var(--orange); }
+  .section-title .sky { color: var(--sky); }
+
+  /* ===== SERVICES ===== */
+  #services {
+    padding: var(--section-pad);
+    background: #020e28;
+    position: relative;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2px;
+    margin-top: 56px;
+    border: 2px solid rgba(97,214,249,0.15);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .service-card {
+    background: rgba(3,18,51,0.8);
+    padding: 48px 40px;
+    border-right: 2px solid rgba(97,214,249,0.1);
+    border-bottom: 2px solid rgba(97,214,249,0.1);
+    transition: background 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px; height: 100%;
+    background: var(--orange);
+    transform: scaleY(0);
+    transition: transform 0.3s;
+    transform-origin: bottom;
+  }
+
+  .service-card:hover { background: rgba(32,78,139,0.3); }
+  .service-card:hover::before { transform: scaleY(1); }
+
+  .service-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 64px;
+    color: rgba(97,214,249,0.1);
+    line-height: 1;
+    margin-bottom: 8px;
+    transition: color 0.3s;
+  }
+
+  .service-card:hover .service-number { color: rgba(251,148,41,0.2); }
+
+  .service-icon {
+    font-size: 36px;
+    margin-bottom: 16px;
+  }
+
+  .service-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    letter-spacing: 1px;
+    color: var(--white);
+    margin-bottom: 16px;
+  }
+
+  .service-desc {
+    font-size: 15px;
+    color: var(--slate);
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  .service-details {
+    list-style: none;
+    margin-top: 16px;
+  }
+
+  .service-details li {
+    font-size: 14px;
+    color: var(--sky);
+    padding: 4px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .service-details li::before {
+    content: '▸';
+    color: var(--orange);
+    font-size: 10px;
+  }
+
+  /* Training pillars */
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+  }
+
+  .pillar-card {
+    background: rgba(32,78,139,0.15);
+    border: 1px solid rgba(97,214,249,0.15);
+    border-radius: 8px;
+    padding: 32px 28px;
+    transition: border-color 0.3s, background 0.3s;
+  }
+
+  .pillar-card:hover {
+    border-color: var(--orange);
+    background: rgba(251,148,41,0.05);
+  }
+
+  .pillar-icon {
+    font-size: 28px;
+    margin-bottom: 14px;
+  }
+
+  .pillar-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+
+  .pillar-desc {
+    font-size: 14px;
+    color: var(--slate);
+    line-height: 1.65;
+  }
+
+  /* Sports tags */
+  .sports-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+
+  .sport-tag {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border: 1px solid rgba(97,214,249,0.3);
+    border-radius: 4px;
+    color: var(--sky);
+  }
+
+  /* ===== ABOUT ===== */
+  #about {
+    padding: var(--section-pad);
+    background: var(--navy);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .about-visual {
+    position: relative;
+  }
+
+  .about-quote-block {
+    background: var(--blue);
+    border-left: 5px solid var(--orange);
+    padding: 40px;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 24px;
+  }
+
+  .about-quote {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--white);
+    font-style: italic;
+  }
+
+  .about-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .stat-box {
+    background: rgba(97,214,249,0.07);
+    border: 1px solid rgba(97,214,249,0.2);
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+  }
+
+  .stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 42px;
+    color: var(--orange);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .stat-label {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--slate);
+  }
+
+  .about-text p {
+    font-size: 17px;
+    color: var(--slate);
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+
+  .about-text p strong { color: var(--white); font-weight: 600; }
+
+  .mission-line {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--sky);
+    border-left: 3px solid var(--sky);
+    padding-left: 20px;
+    margin: 28px 0;
+    line-height: 1.5;
+  }
+
+  /* ===== CLASSES / REGISTER ===== */
+  #classes {
+    padding: var(--section-pad);
+    background: #020e28;
+  }
+
+  .classes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 48px;
+  }
+
+  .class-card {
+    background: var(--navy);
+    border: 1px solid rgba(97,214,249,0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s;
+  }
+
+  .class-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--orange);
+  }
+
+  .class-header {
+    background: var(--blue);
+    padding: 28px 32px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .class-header::after {
+    content: '';
+    position: absolute;
+    bottom: -20px; right: -20px;
+    width: 100px; height: 100px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 50%;
+  }
+
+  .class-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    letter-spacing: 2px;
+    color: var(--white);
+    margin-bottom: 6px;
+  }
+
+  .class-tagline {
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+    font-weight: 500;
+  }
+
+  .class-body { padding: 28px 32px; }
+
+  .class-desc {
+    font-size: 15px;
+    color: var(--slate);
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+
+  .schedule-list { list-style: none; margin-bottom: 28px; }
+
+  .schedule-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(97,214,249,0.1);
+    font-size: 15px;
+    color: var(--white);
+  }
+
+  .schedule-list li:last-child { border-bottom: none; }
+
+  .schedule-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--orange);
+    flex-shrink: 0;
+  }
+
+  /* ===== REGISTER FORM ===== */
+  #register {
+    padding: var(--section-pad);
+    background: linear-gradient(135deg, var(--blue) 0%, #0d2d5e 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  #register::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 400px; height: 400px;
+    background: rgba(97,214,249,0.05);
+    border-radius: 50%;
+  }
+
+  .register-inner {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .register-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 40px;
+    text-align: left;
+  }
+
+  .form-group { display: flex; flex-direction: column; gap: 8px; }
+  .form-group.full { grid-column: 1 / -1; }
+
+  .form-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+  }
+
+  .form-input, .form-select {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(97,214,249,0.3);
+    border-radius: 6px;
+    padding: 14px 16px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;
+    color: var(--white);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .form-input::placeholder { color: rgba(255,255,255,0.3); }
+
+  .form-input:focus, .form-select:focus {
+    border-color: var(--sky);
+  }
+
+  .form-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2361d6f9' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 40px;
+  }
+
+  .form-select option { background: var(--navy); color: var(--white); }
+
+  .form-submit {
+    grid-column: 1 / -1;
+    background: var(--orange);
+    color: var(--navy);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    margin-top: 8px;
+  }
+
+  .form-submit:hover { background: #ffa84a; transform: translateY(-2px); }
+
+  /* ===== PROMO / SALES ===== */
+  #promo {
+    padding: var(--section-pad);
+    background: var(--navy);
+  }
+
+  .promo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 48px;
+  }
+
+  .promo-card {
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .promo-card-inner {
+    padding: 40px 32px;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .promo-card.featured {
+    background: var(--orange);
+  }
+
+  .promo-card.featured .promo-card-inner { color: var(--navy); }
+
+  .promo-card.standard {
+    background: rgba(32,78,139,0.4);
+    border: 1px solid rgba(97,214,249,0.2);
+  }
+
+  .promo-badge {
+    display: inline-block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    background: rgba(0,0,0,0.2);
+    color: var(--white);
+  }
+
+  .promo-card.featured .promo-badge {
+    background: rgba(3,18,51,0.2);
+    color: var(--navy);
+  }
+
+  .promo-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 34px;
+    letter-spacing: 1px;
+    line-height: 1.1;
+    margin-bottom: 12px;
+  }
+
+  .promo-card.featured .promo-title { color: var(--navy); }
+
+  .promo-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.8;
+    margin-bottom: 28px;
+    flex: 1;
+  }
+
+  .promo-card.featured .promo-desc { color: rgba(3,18,51,0.8); }
+
+  .btn-dark {
+    display: inline-block;
+    background: var(--navy);
+    color: var(--white);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 14px 28px;
+    border-radius: 4px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+
+  .btn-dark:hover { opacity: 0.85; }
+
+  .btn-outline-white {
+    display: inline-block;
+    background: transparent;
+    color: var(--white);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 13px 28px;
+    border-radius: 4px;
+    border: 1.5px solid rgba(255,255,255,0.4);
+    text-decoration: none;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .btn-outline-white:hover { border-color: var(--sky); color: var(--sky); }
+
+  /* ===== EMAIL CAPTURE ===== */
+  #email-capture {
+    padding: 80px 5%;
+    background: #000;
+    text-align: center;
+  }
+
+  .email-capture-inner {
+    max-width: 580px;
+    margin: 0 auto;
+  }
+
+  .email-capture-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(36px, 5vw, 56px);
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    color: var(--white);
+  }
+
+  .email-capture-title .accent { color: var(--orange); }
+
+  .email-capture-sub {
+    font-size: 16px;
+    color: var(--slate);
+    margin-bottom: 36px;
+    line-height: 1.6;
+  }
+
+  .email-form {
+    display: flex;
+    gap: 0;
+    max-width: 500px;
+    margin: 0 auto 16px;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1.5px solid rgba(97,214,249,0.3);
+  }
+
+  .email-form input {
+    flex: 1;
+    background: rgba(255,255,255,0.05);
+    border: none;
+    padding: 16px 20px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;
+    color: var(--white);
+    outline: none;
+  }
+
+  .email-form input::placeholder { color: rgba(255,255,255,0.35); }
+
+  .email-form button {
+    background: var(--orange);
+    color: var(--navy);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0 28px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .email-form button:hover { background: #ffa84a; }
+
+  .email-fine {
+    font-size: 12px;
+    color: rgba(255,255,255,0.3);
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: #010b1e;
+    padding: 60px 5% 32px;
+    border-top: 1px solid rgba(97,214,249,0.1);
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 48px;
+  }
+
+  .footer-brand-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+
+  .footer-brand-name span { color: var(--orange); }
+
+  .footer-tagline {
+    font-size: 14px;
+    color: var(--slate);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 300px;
+  }
+
+  .footer-efa {
+    display: inline-block;
+    background: rgba(97,214,249,0.1);
+    border: 1px solid rgba(97,214,249,0.3);
+    color: var(--sky);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 8px 14px;
+    border-radius: 4px;
+    text-transform: uppercase;
+  }
+
+  .footer-col-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--slate);
+    margin-bottom: 20px;
+  }
+
+  .footer-links { list-style: none; }
+
+  .footer-links li { margin-bottom: 12px; }
+
+  .footer-links a {
+    font-size: 15px;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--sky); }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.07);
+    padding-top: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .footer-copyright {
+    font-size: 13px;
+    color: rgba(255,255,255,0.35);
+  }
+
+  .footer-policy-links { display: flex; gap: 20px; }
+
+  .footer-policy-links a {
+    font-size: 13px;
+    color: rgba(255,255,255,0.35);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-policy-links a:hover { color: var(--slate); }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 900px) {
+    #about {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+
+    .classes-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .footer-grid > :first-child {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @media (max-width: 640px) {
+    :root { --section-pad: 72px 5%; }
+
+    nav { padding: 0 4%; }
+
+    .nav-links { display: none; }
+
+    .hero-h1 { font-size: 64px; }
+
+    .register-form { grid-template-columns: 1fr; }
+
+    .footer-grid { grid-template-columns: 1fr; }
+
+    .footer-bottom { flex-direction: column; align-items: flex-start; }
+
+    .email-form { flex-direction: column; }
+    .email-form button { padding: 14px; }
+  }
+
+  /* ===== ANIMATIONS ===== */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-content > * {
+    animation: fadeUp 0.7s ease forwards;
+    opacity: 0;
+  }
+
+  .hero-content > *:nth-child(1) { animation-delay: 0.1s; }
+  .hero-content > *:nth-child(2) { animation-delay: 0.25s; }
+  .hero-content > *:nth-child(3) { animation-delay: 0.35s; }
+  .hero-content > *:nth-child(4) { animation-delay: 0.45s; }
+  .hero-content > *:nth-child(5) { animation-delay: 0.55s; }
+
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <img src="logo.png" alt="Trinity Sports & Athletics" />
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#classes">Classes</a></li>
+    <li><a href="#promo">Offers</a></li>
+    <li><a href="https://form.jotform.com/261406948653061" target="_blank" class="nav-cta">Register Now</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-accent-line"></div>
+  <div class="hero-bg"></div>
+  <div class="hero-grid-overlay"></div>
+  <div class="hero-content">
+    <div style="margin-bottom:24px;">
+      <img src="logo.png" alt="Trinity Sports & Athletics" style="height:160px;width:auto;mix-blend-mode:screen;" />
+    </div>
+    <p class="hero-eyebrow">Northeast Arkansas's Premier Athletic Training Facility</p>
+    <h1 class="hero-h1">
+      Train.<br>
+      <span class="accent">Compete.</span><br>
+      <span class="sky">Excel.</span>
+    </h1>
+    <p class="hero-sub">Developing athletes on and off the field — building discipline, confidence, and a mindset for excellence through Christ-centered sports training.</p>
+    <div class="hero-sports">
+      <span>🏀 Basketball</span>
+      <span>🏈 Football</span>
+      <span>⚽ Soccer</span>
+      <span>🏐 Volleyball</span>
+      <span>🏃 Track</span>
+    </div>
+    <div class="hero-btns">
+      <a href="https://form.jotform.com/261406948653061" target="_blank" class="btn-primary">Register for Classes</a>
+      <a href="#services" class="btn-secondary">View Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- EFA BANNER -->
+<div class="efa-banner">
+  <div class="efa-inner">
+    <div class="efa-badge">✓ EFA Vendor</div>
+    <p class="efa-text">Trinity Sports & Athletics is an <strong>approved EFA (Educational Funds Account) vendor</strong> — families can use EFA funds to pay for training sessions and classes.</p>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="reveal">
+    <p class="section-label">What We Offer</p>
+    <h2 class="section-title">Our <span class="accent">Services</span></h2>
+  </div>
+
+  <div class="services-grid reveal">
+
+    <div class="service-card">
+      <div class="service-number">01</div>
+      <div class="service-icon">🏆</div>
+      <h3 class="service-title">Private/Semi-Private Training</h3>
+      <p class="service-desc">Elevate your game with our 1-hour private/semi-private training sessions. Get the personalized coaching you need while training in a competitive, high-energy environment.</p>
+      <p class="service-desc">Improve skills, build confidence, and take your performance to the next level. Train with purpose. Compete with excellence.</p>
+      <ul class="service-details" style="margin-bottom:20px;">
+        <li>8 sessions/month — $310/month</li>
+        <li>4 sessions/month — $210/month</li>
+        <li>Sibling discount available</li>
+      </ul>
+      <a href="https://form.jotform.com/261406948653061" target="_blank" class="btn-primary" style="font-size:14px;padding:12px 24px;">Book a Session</a>
+    </div>
+
+    <div class="service-card">
+      <div class="service-number">02</div>
+      <div class="service-icon">⚡</div>
+      <h3 class="service-title">Group Classes</h3>
+      <p class="service-desc">Small group training focused on skill development, game IQ, and building confident, competitive athletes. Capped at <strong style="color:#fff">15 athletes per class</strong> for personalized coaching in a high-energy environment.</p>
+      <ul class="service-details">
+        <li>Youth Development (Grades 3–7) &nbsp;|&nbsp; Tue & Thu — 9:00 AM</li>
+        <li>Competitive Development (Grades 8–12) &nbsp;|&nbsp; Wed & Fri — 9:00 AM</li>
+        <li>$160/month &nbsp;|&nbsp; Sibling discount: $110/month</li>
+        <li>Classes begin May 26, 2026</li>
+        <li>Limited spots — register early</li>
+      </ul>
+    </div>
+
+    <div class="service-card" style="border-right:none;">
+      <div class="service-number">03</div>
+      <div class="service-icon">🎯</div>
+      <h3 class="service-title">Develop Your Skills</h3>
+      <div class="sports-row">
+        <span class="sport-tag">Basketball</span>
+        <span class="sport-tag">Football</span>
+        <span class="sport-tag">Soccer</span>
+        <span class="sport-tag">Volleyball</span>
+        <span class="sport-tag">Track</span>
+      </div>
+      <div class="pillars-grid" style="grid-template-columns:1fr 1fr;gap:14px;margin-top:0;">
+        <div class="pillar-card" style="padding:20px;">
+          <div class="pillar-icon">💨</div>
+          <div class="pillar-title" style="font-size:15px;">Speed & Agility</div>
+          <p class="pillar-desc" style="font-size:13px;">Explosive quickness, reaction time, and athletic performance.</p>
+        </div>
+        <div class="pillar-card" style="padding:20px;">
+          <div class="pillar-icon">💪</div>
+          <div class="pillar-title" style="font-size:15px;">Strength & Conditioning</div>
+          <p class="pillar-desc" style="font-size:13px;">Build the physical foundation for elite athletic performance.</p>
+        </div>
+        <div class="pillar-card" style="padding:20px;">
+          <div class="pillar-icon">🔄</div>
+          <div class="pillar-title" style="font-size:15px;">Recovery & Injury Prevention</div>
+          <p class="pillar-desc" style="font-size:13px;">Mobility, stretching, and functional movement to stay strong.</p>
+        </div>
+        <div class="pillar-card" style="padding:20px;">
+          <div class="pillar-icon">🌟</div>
+          <div class="pillar-title" style="font-size:15px;">Tailored Training</div>
+          <p class="pillar-desc" style="font-size:13px;">Customized to your goals — speed, skill, or endurance.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-visual reveal">
+    <div style="position:relative;margin-bottom:24px;">
+      <img
+        src="coach-carter.jpg"
+        alt="Coach Carter — Trinity Sports & Athletics"
+        style="width:100%;border-radius:12px;display:block;object-fit:cover;max-height:480px;object-position:top;"
+      />
+      <!-- overlay badge -->
+      <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(3,18,51,0.95) 0%,transparent 100%);border-radius:0 0 12px 12px;padding:28px 24px 20px;">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:2px;color:var(--white);">Coach Carter</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--orange);">Founder & Head Coach — Trinity Sports & Athletics</div>
+      </div>
+    </div>
+    <div class="about-quote-block">
+      <p class="about-quote">"To train, mentor, and inspire the next generation to reach their fullest potential for Christ through sports."</p>
+    </div>
+    <div class="about-stats">
+      <div class="stat-box">
+        <div class="stat-num">Multi</div>
+        <div class="stat-label">Country Pro Career</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">NE</div>
+        <div class="stat-label">Arkansas-Based</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">D1</div>
+        <div class="stat-label">Walk-On Athlete</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">EFA</div>
+        <div class="stat-label">Approved Vendor</div>
+      </div>
+    </div>
+  </div>
+  <div class="about-text reveal" style="transition-delay:0.15s;">
+    <p class="section-label">Our Story</p>
+    <h2 class="section-title">Meet <span class="accent">Coach Carter</span></h2>
+    <p>Coach Carter's journey is a testament to <strong>hard work, faith, and perseverance.</strong> Despite never playing organized basketball growing up, he defied the odds by walking on at Saint Francis College — proving that dedication and relentless effort can open any door.</p>
+    <p>His talent and work ethic took him beyond college basketball, leading to a <strong>professional career across multiple countries</strong> where he honed his skills and deepened his passion for the game.</p>
+    <div class="mission-line">He turned down the NBA G League to answer a greater calling — serving the youth of Northeast Arkansas.</div>
+    <p>Now, through Trinity Sports & Athletics, Coach Carter is committed to developing athletes on and off the court, <strong>instilling discipline, confidence, and a mindset for success</strong> in every young athlete he trains.</p>
+    <a href="https://form.jotform.com/261406948653061" target="_blank" class="btn-primary" style="margin-top:8px;">Train With Us</a>
+  </div>
+</section>
+
+<!-- CLASS SCHEDULE / REGISTER -->
+<section id="classes">
+  <div class="reveal">
+    <p class="section-label">Schedule & Registration</p>
+    <h2 class="section-title">Group <span class="sky">Classes</span></h2>
+    <p style="color:var(--slate);font-size:17px;max-width:600px;line-height:1.7;">Small group training focused on skill development, game IQ, and building confident, competitive athletes. <strong style="color:var(--white)">Classes begin May 26, 2026.</strong> Limited spots — register early.</p>
+  </div>
+
+  <div class="classes-grid">
+    <div class="class-card reveal">
+      <div class="class-header">
+        <div class="class-name">Youth Development</div>
+        <div class="class-tagline">Grades 3–7 | Train. Compete. Grow.</div>
+      </div>
+      <div class="class-body">
+        <p class="class-desc">Build strong fundamentals, improve confidence, and develop the skills to become a better athlete and teammate. Small group coaching in a high-energy environment built for young athletes ready to grow.</p>
+        <ul class="schedule-list">
+          <li><span class="schedule-dot"></span>Tuesdays & Thursdays — 9:00 AM</li>
+          <li><span class="schedule-dot"></span>Classes begin May 26, 2026</li>
+          <li><span class="schedule-dot"></span>Max 15 athletes per class</li>
+          <li><span class="schedule-dot"></span>Skill development, footwork, ball handling & more</li>
+          <li><span class="schedule-dot"></span>Confidence & discipline — on and off the court</li>
+        </ul>
+        <a href="https://form.jotform.com/261406948653061" target="_blank" class="btn-primary">Register Now</a>
+      </div>
+    </div>
+
+    <div class="class-card reveal" style="transition-delay:0.15s;">
+      <div class="class-header" style="background:linear-gradient(135deg,#031233,#204e8b);">
+        <div class="class-name">Competitive Development</div>
+        <div class="class-tagline">Grades 8–12 | Train. Compete. Grow.</div>
+      </div>
+      <div class="class-body">
+        <p class="class-desc">Elevate your game with advanced skill training, game situations, and a focus on becoming your best on and off the court. Built for athletes serious about competing at the next level.</p>
+        <ul class="schedule-list">
+          <li><span class="schedule-dot"></span>Wednesdays & Fridays — 9:00 AM</li>
+          <li><span class="schedule-dot"></span>Classes begin May 26, 2026</li>
+          <li><span class="schedule-dot"></span>Max 15 athletes per class</li>
+          <li><span class="schedule-dot"></span>Basketball IQ, game situations & mental toughness</li>
+          <li><span class="schedule-dot"></span>Compete. Improve. Grow. — every rep, every day.</li>
+        </ul>
+        <a href="https://form.jotform.com/261406948653061" target="_blank" class="btn-primary">Register Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- What's Included Pillars -->
+  <div class="reveal" style="margin-top:48px;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;">
+      <div style="background:rgba(32,78,139,0.2);border:1px solid rgba(97,214,249,0.15);border-radius:8px;padding:24px 20px;text-align:center;">
+        <div style="font-size:28px;margin-bottom:10px;">🏀</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--white);margin-bottom:8px;">Skill Development</div>
+        <p style="font-size:13px;color:var(--slate);line-height:1.55;">Fundamentals, footwork, shooting, ball handling & more</p>
+      </div>
+      <div style="background:rgba(32,78,139,0.2);border:1px solid rgba(97,214,249,0.15);border-radius:8px;padding:24px 20px;text-align:center;">
+        <div style="font-size:28px;margin-bottom:10px;">👥</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--white);margin-bottom:8px;">Small Group Training</div>
+        <p style="font-size:13px;color:var(--slate);line-height:1.55;">Personalized coaching in a high-energy environment</p>
+      </div>
+      <div style="background:rgba(32,78,139,0.2);border:1px solid rgba(97,214,249,0.15);border-radius:8px;padding:24px 20px;text-align:center;">
+        <div style="font-size:28px;margin-bottom:10px;">🧠</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--white);margin-bottom:8px;">Basketball IQ & Game Situations</div>
+        <p style="font-size:13px;color:var(--slate);line-height:1.55;">Learn to read the game and make smarter decisions</p>
+      </div>
+      <div style="background:rgba(32,78,139,0.2);border:1px solid rgba(97,214,249,0.15);border-radius:8px;padding:24px 20px;text-align:center;">
+        <div style="font-size:28px;margin-bottom:10px;">🏆</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--white);margin-bottom:8px;">Confidence & Discipline</div>
+        <p style="font-size:13px;color:var(--slate);line-height:1.55;">Build mental toughness and become a leader</p>
+      </div>
+      <div style="background:rgba(32,78,139,0.2);border:1px solid rgba(97,214,249,0.15);border-radius:8px;padding:24px 20px;text-align:center;">
+        <div style="font-size:28px;margin-bottom:10px;">📈</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--white);margin-bottom:8px;">Compete. Improve. Grow.</div>
+        <p style="font-size:13px;color:var(--slate);line-height:1.55;">Every rep. Every day. Real results that show up in the game.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Start date urgency bar -->
+  <div class="reveal" style="margin-top:40px;background:var(--orange);border-radius:8px;padding:28px 36px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;">
+    <div>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(3,18,51,0.7);margin-bottom:4px;">Classes Begin</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:42px;letter-spacing:2px;color:var(--navy);line-height:1;">May 26, 2026</div>
+    </div>
+    <div style="text-align:right;">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:1px;color:var(--navy);">Limited Spots. Big Impact.</div>
+      <div style="font-size:15px;color:rgba(3,18,51,0.75);margin-top:4px;">Register at trinitysportsandathletics.com or call 870-955-4746</div>
+    </div>
+    <a href="https://form.jotform.com/261406948653061" target="_blank" class="btn-dark" style="flex-shrink:0;">Register Now</a>
+  </div>
+</section>
+
+<!-- REGISTER FORM -->
+<section id="register">
+  <div class="register-inner reveal">
+    <p class="section-label" style="justify-content:center;">Join the Program</p>
+    <h2 class="section-title">Register <span class="sky">Today</span></h2>
+    <p style="color:rgba(255,255,255,0.7);font-size:16px;line-height:1.7;margin-bottom:12px;">Secure your spot in a Group Class or schedule private training. Classes begin May 26 — spots fill fast.</p>
+    <p style="font-size:13px;color:rgba(255,255,255,0.45);margin-bottom:32px;">By submitting the form below you confirm you have read and agree to the <a href="policy.html" target="_blank" style="color:var(--sky);text-decoration:underline;">TSA Participation Policy, Waiver of Liability & Media Release</a>.</p>
+    <div style="border-radius:8px;overflow:hidden;border:1px solid rgba(97,214,249,0.15);">
+      <iframe
+        id="jotform-embed"
+        title="TSA Registration Form"
+        src="https://form.jotform.com/261406948653061"
+        allowtransparency="true"
+        allowfullscreen="true"
+        allow="geolocation; microphone; camera"
+        style="width:100%;min-height:700px;border:none;background:transparent;"
+        scrolling="no"
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+
+<!-- PROMOS -->
+<section id="promo">
+  <div class="reveal">
+    <p class="section-label">Current Offers</p>
+    <h2 class="section-title">Train <span class="accent">Smart</span></h2>
+    <p style="color:var(--slate);font-size:17px;max-width:520px;line-height:1.7;">Invest in your athlete's future. Our packages are built to deliver results at every level.</p>
+  </div>
+
+  <div class="promo-grid">
+    <div class="promo-card featured reveal">
+      <div class="promo-card-inner">
+        <span class="promo-badge">⭐ Best Value</span>
+        <h3 class="promo-title">Group Classes — $160/mo</h3>
+        <p class="promo-desc" style="color:rgba(3,18,51,0.75);">8 sessions per month of structured, high-intensity small group training. Youth Development or Competitive Development — limited to 15 athletes per class.</p>
+        <a href="https://form.jotform.com/261406948653061" target="_blank" class="btn-dark">Register Now</a>
+      </div>
+    </div>
+
+    <div class="promo-card standard reveal" style="transition-delay:0.1s;">
+      <div class="promo-card-inner">
+        <span class="promo-badge">🏆 Elite</span>
+        <h3 class="promo-title">Private/Semi-Private Training</h3>
+        <p class="promo-desc">8 sessions/month for $310 or 4 sessions/month for $210. Personalized 1-hour sessions with Coach Carter tailored to your athlete's sport and goals.</p>
+        <a href="https://form.jotform.com/261406948653061" target="_blank" class="btn-outline-white">Register Now</a>
+      </div>
+    </div>
+
+    <div class="promo-card standard reveal" style="transition-delay:0.2s;">
+      <div class="promo-card-inner">
+        <span class="promo-badge">🤝 Team</span>
+        <h3 class="promo-title">Team Training</h3>
+        <p class="promo-desc">Custom training programs for teams — pricing based on size, frequency, and needs. Contact Coach Carter directly for a quote.</p>
+        <a href="tel:8709554746" class="btn-outline-white">Call 870-955-4746</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EMAIL CAPTURE -->
+<section id="email-capture">
+  <div class="email-capture-inner reveal">
+    <h2 class="email-capture-title">Stay in the <span class="accent">Game</span></h2>
+    <p class="email-capture-sub">Get updates on class schedules, training tips, special offers, and announcements from Trinity Sports & Athletics delivered to your inbox.</p>
+    <div class="email-form">
+      <input type="email" placeholder="Enter your email address" id="email-input" />
+      <button onclick="handleEmail()">Subscribe</button>
+    </div>
+    <p class="email-fine">No spam, ever. Unsubscribe anytime. We respect your privacy.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <img src="logo.png" alt="Trinity Sports & Athletics" style="height:100px;width:auto;mix-blend-mode:screen;margin-bottom:8px;display:block;" />
+      <p class="footer-tagline">Developing athletes on and off the court — instilling discipline, confidence, and a mindset for success. Northeast Arkansas's premier athletic training facility.</p>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:16px;">
+        <a href="tel:8709554746" style="font-size:14px;color:var(--sky);text-decoration:none;">📞 870-955-4746</a>
+        <a href="https://www.trinitysportsandathletics.com" style="font-size:14px;color:var(--sky);text-decoration:none;">🌐 trinitysportsandathletics.com</a>
+      </div>
+      <span class="footer-efa">✓ Approved EFA Vendor</span>
+    </div>
+    <div>
+      <p class="footer-col-title">Quick Links</p>
+      <ul class="footer-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About Coach Carter</a></li>
+        <li><a href="#classes">Class Schedule</a></li>
+        <li><a href="https://form.jotform.com/261406948653061" target="_blank">Register</a></li>
+        <li><a href="#promo">Current Offers</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-col-title">Programs</p>
+      <ul class="footer-links">
+        <li><a href="#classes">Youth Development (Grades 3–7)</a></li>
+        <li><a href="#classes">Competitive Development (Grades 8–12)</a></li>
+        <li><a href="#services">Private/Semi-Private Training</a></li>
+        <li><a href="#services">Team Training</a></li>
+        <li><a href="#email-capture">Newsletter</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p class="footer-copyright">© 2025 Trinity Sports & Athletics. All rights reserved. Northeast Arkansas.</p>
+    <div class="footer-policy-links">
+      <a href="policy.html">Participation Policy</a>
+      <a href="policy.html#waiver">Waiver of Liability</a>
+      <a href="policy.html#media">Media Release</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(r => observer.observe(r));
+
+  // Register form
+  function handleRegister(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.form-submit');
+    btn.textContent = '✓ Registration Submitted!';
+    btn.style.background = '#61d6f9';
+    btn.style.color = '#031233';
+    btn.disabled = true;
+    e.target.reset();
+    setTimeout(() => {
+      btn.textContent = 'Submit Registration →';
+      btn.style.background = '';
+      btn.style.color = '';
+      btn.disabled = false;
+    }, 4000);
+  }
+
+  // Email capture
+  function handleEmail() {
+    const input = document.getElementById('email-input');
+    const btn = input.nextElementSibling;
+    if (!input.value || !input.value.includes('@')) {
+      input.style.borderColor = '#fb9429';
+      setTimeout(() => input.style.borderColor = '', 2000);
+      return;
+    }
+    btn.textContent = '✓ Subscribed!';
+    btn.style.background = '#61d6f9';
+    btn.disabled = true;
+    input.value = '';
+    setTimeout(() => {
+      btn.textContent = 'Subscribe';
+      btn.style.background = '';
+      btn.disabled = false;
+    }, 4000);
+  }
+</script>
+</body>
+</html>
