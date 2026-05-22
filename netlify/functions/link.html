@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trinity Sports & Athletics | Northeast Arkansas</title>
+<meta name="description" content="Train. Compete. Excel. Northeast Arkansas's premier youth athletic training facility. Group classes, private training, and more.">
+<!-- Open Graph for social sharing previews -->
+<meta property="og:title" content="Trinity Sports & Athletics" />
+<meta property="og:description" content="Classes start May 26. Limited spots. Register now." />
+<meta property="og:image" content="coach-carter.jpg" />
+<meta property="og:type" content="website" />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #031233;
+    --orange: #fb9429;
+    --sky: #61d6f9;
+    --blue: #204e8b;
+    --slate: #9eadaf;
+    --white: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Barlow', sans-serif;
+    background: var(--navy);
+    color: var(--white);
+    min-height: 100vh;
+  }
+
+  /* TOP BAR */
+  .top-bar {
+    background: var(--orange);
+    text-align: center;
+    padding: 10px 5%;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--navy);
+  }
+
+  /* NAV */
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    height: 64px;
+    background: rgba(3,18,51,0.98);
+    border-bottom: 1px solid rgba(97,214,249,0.15);
+  }
+
+  nav img {
+    height: 48px;
+    mix-blend-mode: screen;
+  }
+
+  .nav-site-link {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--slate);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-site-link:hover { color: var(--sky); }
+
+  /* HERO */
+  .hero {
+    padding: 60px 5% 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 0%, rgba(32,78,139,0.4) 0%, transparent 70%);
+  }
+
+  .hero-content { position: relative; z-index: 1; }
+
+  .hero-eyebrow {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--sky);
+    margin-bottom: 16px;
+  }
+
+  .hero-h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(52px, 12vw, 96px);
+    line-height: 0.95;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+
+  .hero-h1 .accent { color: var(--orange); }
+  .hero-h1 .sky { color: var(--sky); }
+
+  .hero-sub {
+    font-size: 18px;
+    color: var(--slate);
+    max-width: 480px;
+    margin: 0 auto 36px;
+    line-height: 1.65;
+  }
+
+  /* EMAIL CAPTURE — PRIMARY CTA */
+  .capture-box {
+    background: rgba(32,78,139,0.25);
+    border: 1px solid rgba(97,214,249,0.25);
+    border-radius: 12px;
+    padding: 36px 32px;
+    max-width: 480px;
+    margin: 0 auto 48px;
+  }
+
+  .capture-box h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    color: var(--white);
+  }
+
+  .capture-box p {
+    font-size: 14px;
+    color: var(--slate);
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+
+  .email-row {
+    display: flex;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1.5px solid rgba(97,214,249,0.3);
+    margin-bottom: 12px;
+  }
+
+  .email-row input {
+    flex: 1;
+    background: rgba(255,255,255,0.05);
+    border: none;
+    padding: 14px 16px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;
+    color: var(--white);
+    outline: none;
+  }
+
+  .email-row input::placeholder { color: rgba(255,255,255,0.35); }
+
+  .email-row button {
+    background: var(--orange);
+    color: var(--navy);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0 24px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+    white-space: nowrap;
+  }
+
+  .email-row button:hover { background: #ffa84a; }
+
+  .capture-fine {
+    font-size: 12px;
+    color: rgba(255,255,255,0.3);
+    text-align: center;
+  }
+
+  .divider-text {
+    text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.25);
+    margin: 20px 0;
+    position: relative;
+  }
+
+  .divider-text::before, .divider-text::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 35%;
+    height: 1px;
+    background: rgba(255,255,255,0.1);
+  }
+
+  .divider-text::before { left: 0; }
+  .divider-text::after { right: 0; }
+
+  .btn-primary {
+    display: block;
+    background: var(--orange);
+    color: var(--navy);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.2s, transform 0.15s;
+    margin-top: 8px;
+  }
+
+  .btn-primary:hover { background: #ffa84a; transform: translateY(-2px); }
+
+  /* QUICK LINKS */
+  .quick-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    max-width: 480px;
+    margin: 0 auto 60px;
+  }
+
+  .quick-link {
+    background: rgba(32,78,139,0.2);
+    border: 1px solid rgba(97,214,249,0.15);
+    border-radius: 10px;
+    padding: 20px 16px;
+    text-align: center;
+    text-decoration: none;
+    transition: border-color 0.2s, background 0.2s;
+    display: block;
+  }
+
+  .quick-link:hover {
+    border-color: var(--orange);
+    background: rgba(251,148,41,0.08);
+  }
+
+  .quick-link-icon { font-size: 24px; margin-bottom: 8px; }
+
+  .quick-link-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+
+  .quick-link-sub {
+    font-size: 12px;
+    color: var(--slate);
+  }
+
+  /* SOCIAL PROOF */
+  .proof-strip {
+    background: rgba(32,78,139,0.15);
+    border-top: 1px solid rgba(97,214,249,0.1);
+    border-bottom: 1px solid rgba(97,214,249,0.1);
+    padding: 24px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+    text-align: center;
+  }
+
+  .proof-item-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    color: var(--orange);
+    line-height: 1;
+  }
+
+  .proof-item-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--slate);
+    margin-top: 2px;
+  }
+
+  /* COACH SECTION */
+  .coach-section {
+    max-width: 480px;
+    margin: 0 auto 48px;
+    padding: 0 5%;
+  }
+
+  .coach-img-wrap {
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .coach-img-wrap img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    max-height: 320px;
+    object-position: top;
+  }
+
+  .coach-overlay {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to top, rgba(3,18,51,0.95), transparent);
+    padding: 24px 20px 16px;
+  }
+
+  .coach-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+    letter-spacing: 2px;
+    color: var(--white);
+  }
+
+  .coach-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--orange);
+  }
+
+  .coach-quote {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--white);
+    border-left: 3px solid var(--orange);
+    padding-left: 16px;
+    line-height: 1.4;
+    margin-bottom: 16px;
+  }
+
+  .coach-bio {
+    font-size: 15px;
+    color: var(--slate);
+    line-height: 1.7;
+  }
+
+  /* EFA */
+  .efa-strip {
+    background: linear-gradient(135deg, var(--blue), #0d2d5e);
+    border-top: 2px solid var(--sky);
+    border-bottom: 2px solid var(--sky);
+    padding: 20px 5%;
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .efa-strip p {
+    font-size: 15px;
+    color: var(--white);
+    line-height: 1.6;
+  }
+
+  .efa-strip strong { color: var(--sky); }
+
+  /* FOOTER */
+  footer {
+    background: #010b1e;
+    border-top: 1px solid rgba(97,214,249,0.1);
+    padding: 28px 5%;
+    text-align: center;
+  }
+
+  footer img {
+    height: 60px;
+    mix-blend-mode: screen;
+    margin-bottom: 12px;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+  }
+
+  .footer-links a {
+    font-size: 13px;
+    color: var(--sky);
+    text-decoration: none;
+  }
+
+  .footer-copy {
+    font-size: 12px;
+    color: rgba(255,255,255,0.25);
+  }
+
+  /* SUCCESS STATE */
+  .success-box {
+    background: rgba(97,214,249,0.1);
+    border: 1px solid var(--sky);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    display: none;
+  }
+
+  .success-box h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    color: var(--sky);
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  .success-box p {
+    font-size: 14px;
+    color: var(--slate);
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+
+<!-- URGENCY BAR -->
+<div class="top-bar">🏀 Classes Begin May 26 — Limited Spots Available — Register Now</div>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html"><img src="logo.png" alt="Trinity Sports & Athletics" /></a>
+  <a href="index.html" class="nav-site-link">Full Website →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <p class="hero-eyebrow">Northeast Arkansas's Premier Athletic Training</p>
+    <h1 class="hero-h1">
+      Train.<br>
+      <span class="accent">Compete.</span><br>
+      <span class="sky">Excel.</span>
+    </h1>
+    <p class="hero-sub">Developing athletes on and off the field — skill development, game IQ, confidence, and a mindset built for success.</p>
+  </div>
+</section>
+
+<!-- EMAIL CAPTURE -->
+<div style="padding:0 5%;max-width:540px;margin:0 auto;">
+  <div class="capture-box">
+    <h2>Get Early Access & Updates</h2>
+    <p>Be the first to know about class openings, special offers, and training tips from Coach Carter.</p>
+
+    <div id="signup-form">
+      <div class="email-row">
+        <input type="email" placeholder="Enter your email address" id="lp-email" />
+        <button onclick="lpSubscribe()">Join</button>
+      </div>
+      <p class="capture-fine">No spam, ever. Unsubscribe anytime.</p>
+
+      <div class="divider-text">or</div>
+
+      <a href="https://form.jotform.com/261406948653061" target="_blank" class="btn-primary">
+        Register for Classes Now →
+      </a>
+    </div>
+
+    <div class="success-box" id="success-box">
+      <h3>✓ You're In!</h3>
+      <p>Check your inbox for a welcome message from Coach Carter. Ready to register? Secure your spot now.</p>
+      <a href="https://form.jotform.com/261406948653061" target="_blank" class="btn-primary" style="margin-top:16px;">Register Now →</a>
+    </div>
+  </div>
+</div>
+
+<!-- QUICK LINKS -->
+<div class="quick-links">
+  <a href="index.html#classes" class="quick-link">
+    <div class="quick-link-icon">📅</div>
+    <div class="quick-link-label">Class Schedule</div>
+    <div class="quick-link-sub">Youth & Competitive</div>
+  </a>
+  <a href="index.html#services" class="quick-link">
+    <div class="quick-link-icon">🏆</div>
+    <div class="quick-link-label">Private Training</div>
+    <div class="quick-link-sub">1-on-1 with Coach Carter</div>
+  </a>
+  <a href="index.html#shop" class="quick-link">
+    <div class="quick-link-icon">👕</div>
+    <div class="quick-link-label">Merch Shop</div>
+    <div class="quick-link-sub">Pre-sale open now</div>
+  </a>
+  <a href="policy.html" class="quick-link">
+    <div class="quick-link-icon">📋</div>
+    <div class="quick-link-label">Policies & Waiver</div>
+    <div class="quick-link-sub">All programs</div>
+  </a>
+</div>
+
+<!-- SOCIAL PROOF -->
+<div class="proof-strip">
+  <div>
+    <div class="proof-item-num">15</div>
+    <div class="proof-item-label">Max Athletes Per Class</div>
+  </div>
+  <div>
+    <div class="proof-item-num">8</div>
+    <div class="proof-item-label">Sessions Per Month</div>
+  </div>
+  <div>
+    <div class="proof-item-num">Multi</div>
+    <div class="proof-item-label">Country Pro Career</div>
+  </div>
+  <div>
+    <div class="proof-item-num">EFA</div>
+    <div class="proof-item-label">Approved Vendor</div>
+  </div>
+</div>
+
+<!-- COACH SECTION -->
+<div class="coach-section">
+  <div class="coach-img-wrap">
+    <img src="coach-carter.jpg" alt="Coach Carter" />
+    <div class="coach-overlay">
+      <div class="coach-name">Coach Carter</div>
+      <div class="coach-title">Founder & Head Coach</div>
+    </div>
+  </div>
+  <p class="coach-quote">"To train, mentor, and inspire the next generation to reach their fullest potential for Christ through sports."</p>
+  <p class="coach-bio">A walk-on at Saint Francis College turned professional player across multiple countries — Coach Carter turned down the NBA G League to serve the youth of Northeast Arkansas. Now he's building the next generation of athletes through Trinity Sports & Athletics.</p>
+</div>
+
+<!-- EFA STRIP -->
+<div class="efa-strip">
+  <p>✓ <strong>Approved EFA Vendor</strong> — Use your Educational Funds Account to pay for any TSA program through ClassWallet.</p>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <img src="logo.png" alt="Trinity Sports & Athletics" />
+  <div class="footer-links">
+    <a href="tel:8709554746">📞 870-955-4746</a>
+    <a href="https://www.trinitysportsandathletics.com">🌐 trinitysportsandathletics.com</a>
+    <a href="policy.html">Policy & Waiver</a>
+  </div>
+  <p class="footer-copy">© 2025 Trinity Sports & Athletics LLC. Northeast Arkansas. Better every day. Stronger together. With TSA.</p>
+</footer>
+
+<script>
+  async function lpSubscribe() {
+    const input = document.getElementById('lp-email');
+    const btn = input.nextElementSibling;
+    const email = input.value.trim();
+
+    if (!email || !email.includes('@')) {
+      input.style.borderColor = '#fb9429';
+      setTimeout(() => input.style.borderColor = '', 2000);
+      return;
+    }
+
+    btn.textContent = '...';
+    btn.disabled = true;
+
+    try {
+      const response = await fetch('/.netlify/functions/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email })
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        document.getElementById('signup-form').style.display = 'none';
+        document.getElementById('success-box').style.display = 'block';
+      } else {
+        throw new Error(data.error || 'Signup failed');
+      }
+    } catch (err) {
+      btn.textContent = 'Try Again';
+      btn.style.background = '#fb9429';
+      btn.disabled = false;
+      setTimeout(() => {
+        btn.textContent = 'Join';
+        btn.style.background = '';
+      }, 3000);
+    }
+  }
+</script>
+</body>
+</html>
