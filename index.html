@@ -1062,10 +1062,11 @@
     <img src="logo.png" alt="Trinity Sports & Athletics" />
   </a>
   <ul class="nav-links">
+    <li><a href="#clinic">Clinics</a></li>
+    <li><a href="#classes">Classes</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#about">About</a></li>
-    <li><a href="#classes">Classes</a></li>
-    <li><a href="#promo">Offers</a></li>
+    <li><a href="#shop">Shop</a></li>
     <li><a href="https://form.jotform.com/261406948653061" target="_blank" class="nav-cta">Register Now</a></li>
   </ul>
 </nav>
@@ -1085,17 +1086,15 @@
       <span class="accent">Compete.</span><br>
       <span class="sky">Excel.</span>
     </h1>
-    <p class="hero-sub">Developing athletes on and off the field — building discipline, confidence, and a mindset for excellence through Christ-centered sports training.</p>
-    <div class="hero-sports">
-      <span>🏀 Basketball</span>
-      <span>🏈 Football</span>
-      <span>⚽ Soccer</span>
-      <span>🏐 Volleyball</span>
-      <span>🏃 Track</span>
+    <p class="hero-sub">Group classes and Foundation Clinics forming now — only 15 spots per group. Developing athletes on and off the field through Christ-centered training.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:40px;">
+      <div style="background:rgba(251,148,41,0.15);border:1px solid rgba(251,148,41,0.5);border-radius:6px;padding:10px 18px;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--orange);">🏀 Group Classes — $160/mo</div>
+      <div style="background:rgba(97,214,249,0.1);border:1px solid rgba(97,214,249,0.3);border-radius:6px;padding:10px 18px;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--sky);">⚡ Foundation Clinic — $100</div>
+      <div style="background:rgba(97,214,249,0.1);border:1px solid rgba(97,214,249,0.3);border-radius:6px;padding:10px 18px;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--sky);">✓ EFA Accepted</div>
     </div>
     <div class="hero-btns">
-      <a href="https://form.jotform.com/261406948653061" target="_blank" class="btn-primary">Register for Classes</a>
-      <a href="#services" class="btn-secondary">View Services</a>
+      <a href="#clinic" class="btn-primary">View Clinic Dates →</a>
+      <a href="#classes" class="btn-secondary">See Class Schedule</a>
     </div>
   </div>
 </section>
@@ -1108,128 +1107,257 @@
   </div>
 </div>
 
-<!-- SERVICES -->
-<section id="services">
+<!-- FOUNDATION CLINIC -->
+<section id="clinic" style="padding:var(--section-pad);background:var(--navy);position:relative;overflow:hidden;">
+  <div style="position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:rgba(251,148,41,0.04);border-radius:50%;pointer-events:none;"></div>
+
   <div class="reveal">
-    <p class="section-label">What We Offer</p>
-    <h2 class="section-title">Our <span class="accent">Services</span></h2>
+    <p class="section-label">Recurring Event</p>
+    <h2 class="section-title">TSA Foundation <span class="accent">Clinic</span></h2>
+    <p style="font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--sky);margin-bottom:16px;">Rooted in Faith. Built for the Court.</p>
+    <p style="color:var(--slate);font-size:17px;max-width:620px;line-height:1.7;margin-bottom:32px;">1–2 clinics per month. Two age groups. 2.5 hours of focused skill development, honest athlete assessment, skill competitions, and coaching that tells you the truth. Only 15 spots per group — register before they fill.</p>
   </div>
 
-  <div class="services-grid reveal">
+  <!-- ═══════════════════════════════════════════════════════
+       UPCOMING CLINIC DATES — SHOW ONLY 2 AT A TIME
+       
+       TO SWAP IN NEW DATES EACH MONTH:
+       1. Find the two ACTIVE clinic cards (no "display:none")
+       2. Add   style="display:none;"   to each to hide them
+       3. Find the next two UPCOMING cards and remove their display:none
+       4. Commit to GitHub — live in 30 seconds
+       ═══════════════════════════════════════════════════════ -->
+  <div id="clinic-grid" class="reveal" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-bottom:48px;">
 
-    <div class="service-card">
-      <div class="service-number">01</div>
-      <div class="service-icon">🏆</div>
-      <h3 class="service-title">Private/Semi-Private Training</h3>
-      <p class="service-desc">Elevate your game with our 1-hour private/semi-private training sessions. Get the personalized coaching you need while training in a competitive, high-energy environment.</p>
-      <p class="service-desc">Improve skills, build confidence, and take your performance to the next level. Train with purpose. Compete with excellence.</p>
-      <ul class="service-details" style="margin-bottom:20px;">
-        <li>8 sessions/month — $310/month</li>
-        <li>4 sessions/month — $210/month</li>
-        <li>Sibling discount available</li>
-      </ul>
-      <a href="https://form.jotform.com/261406948653061" target="_blank" class="btn-primary" style="font-size:14px;padding:12px 24px;">Book a Session</a>
-    </div>
-
-    <div class="service-card">
-      <div class="service-number">02</div>
-      <div class="service-icon">⚡</div>
-      <h3 class="service-title">Group Classes</h3>
-      <p class="service-desc">Small group training focused on skill development, game IQ, and building confident, competitive athletes. Capped at <strong style="color:#fff">15 athletes per class</strong> for personalized coaching in a high-energy environment.</p>
-      <ul class="service-details">
-        <li>Youth Development (Grades 3–7) &nbsp;|&nbsp; Tue & Thu — 9:00 AM</li>
-        <li>Competitive Development (Grades 8–12) &nbsp;|&nbsp; Wed & Fri — 9:00 AM</li>
-        <li>$160/month &nbsp;|&nbsp; Sibling discount: $110/month</li>
-        <li>Classes begin May 26, 2026</li>
-        <li>Limited spots — register early</li>
-      </ul>
-    </div>
-
-    <div class="service-card" style="border-right:none;">
-      <div class="service-number">03</div>
-      <div class="service-icon">🎯</div>
-      <h3 class="service-title">Develop Your Skills</h3>
-      <div class="sports-row">
-        <span class="sport-tag">Basketball</span>
-        <span class="sport-tag">Football</span>
-        <span class="sport-tag">Soccer</span>
-        <span class="sport-tag">Volleyball</span>
-        <span class="sport-tag">Track</span>
+    <!-- ✅ ACTIVE — May 30 -->
+    <div class="clinic-card" data-deadline="2026-05-27">
+      <div class="clinic-card-header orange">
+        <div class="clinic-month">May 2026</div>
+        <div class="clinic-date-big">May 30</div>
+        <div class="clinic-deadline"></div>
       </div>
-      <div class="pillars-grid" style="grid-template-columns:1fr 1fr;gap:14px;margin-top:0;">
-        <div class="pillar-card" style="padding:20px;">
-          <div class="pillar-icon">💨</div>
-          <div class="pillar-title" style="font-size:15px;">Speed & Agility</div>
-          <p class="pillar-desc" style="font-size:13px;">Explosive quickness, reaction time, and athletic performance.</p>
+      <div class="clinic-card-body">
+        <div class="clinic-session">
+          <div class="clinic-session-tag">Grades 3–7</div>
+          <div class="clinic-time">🕘 9:00 AM – 11:30 AM</div>
         </div>
-        <div class="pillar-card" style="padding:20px;">
-          <div class="pillar-icon">💪</div>
-          <div class="pillar-title" style="font-size:15px;">Strength & Conditioning</div>
-          <p class="pillar-desc" style="font-size:13px;">Build the physical foundation for elite athletic performance.</p>
+        <div class="clinic-session" style="margin-top:12px;">
+          <div class="clinic-session-tag blue">Grades 8–12</div>
+          <div class="clinic-time">🕛 12:00 PM – 2:30 PM</div>
         </div>
-        <div class="pillar-card" style="padding:20px;">
-          <div class="pillar-icon">🔄</div>
-          <div class="pillar-title" style="font-size:15px;">Recovery & Injury Prevention</div>
-          <p class="pillar-desc" style="font-size:13px;">Mobility, stretching, and functional movement to stay strong.</p>
-        </div>
-        <div class="pillar-card" style="padding:20px;">
-          <div class="pillar-icon">🌟</div>
-          <div class="pillar-title" style="font-size:15px;">Tailored Training</div>
-          <p class="pillar-desc" style="font-size:13px;">Customized to your goals — speed, skill, or endurance.</p>
-        </div>
+        <div class="clinic-spots">⚠ Only 15 spots per group</div>
+        <a href="https://form.jotform.com/261406948653061" target="_blank" class="btn-primary" style="display:block;text-align:center;margin-top:20px;font-size:15px;padding:13px;">Register — $100 →</a>
       </div>
     </div>
 
+    <!-- ✅ ACTIVE — June 6 -->
+    <div class="clinic-card" data-deadline="2026-06-03">
+      <div class="clinic-card-header blue-header">
+        <div class="clinic-month">June 2026</div>
+        <div class="clinic-date-big">June 6</div>
+        <div class="clinic-deadline"></div>
+      </div>
+      <div class="clinic-card-body">
+        <div class="clinic-session">
+          <div class="clinic-session-tag">Grades 3–7</div>
+          <div class="clinic-time">🕘 9:00 AM – 11:30 AM</div>
+        </div>
+        <div class="clinic-session" style="margin-top:12px;">
+          <div class="clinic-session-tag blue">Grades 8–12</div>
+          <div class="clinic-time">🕛 12:00 PM – 2:30 PM</div>
+        </div>
+        <div class="clinic-spots">⚠ Only 15 spots per group</div>
+        <a href="https://form.jotform.com/261406948653061" target="_blank" class="btn-primary" style="display:block;text-align:center;margin-top:20px;font-size:15px;padding:13px;">Register — $100 →</a>
+      </div>
+    </div>
+
+    <!-- ⏸ UPCOMING — June 20 (hidden — activate when May 30 passes) -->
+    <div class="clinic-card" data-deadline="2026-06-17" style="display:none;">
+      <div class="clinic-card-header orange">
+        <div class="clinic-month">June 2026</div>
+        <div class="clinic-date-big">June 20</div>
+        <div class="clinic-deadline"></div>
+      </div>
+      <div class="clinic-card-body">
+        <div class="clinic-session">
+          <div class="clinic-session-tag">Grades 3–7</div>
+          <div class="clinic-time">🕘 9:00 AM – 11:30 AM</div>
+        </div>
+        <div class="clinic-session" style="margin-top:12px;">
+          <div class="clinic-session-tag blue">Grades 8–12</div>
+          <div class="clinic-time">🕛 12:00 PM – 2:30 PM</div>
+        </div>
+        <div class="clinic-spots">⚠ Only 15 spots per group</div>
+        <a href="https://form.jotform.com/261406948653061" target="_blank" class="btn-primary" style="display:block;text-align:center;margin-top:20px;font-size:15px;padding:13px;">Register — $100 →</a>
+      </div>
+    </div>
+
+    <!-- ⏸ UPCOMING — July 11 (hidden) -->
+    <div class="clinic-card" data-deadline="2026-07-08" style="display:none;">
+      <div class="clinic-card-header blue-header">
+        <div class="clinic-month">July 2026</div>
+        <div class="clinic-date-big">July 11</div>
+        <div class="clinic-deadline"></div>
+      </div>
+      <div class="clinic-card-body">
+        <div class="clinic-session">
+          <div class="clinic-session-tag">Grades 3–7</div>
+          <div class="clinic-time">🕘 9:00 AM – 11:30 AM</div>
+        </div>
+        <div class="clinic-session" style="margin-top:12px;">
+          <div class="clinic-session-tag blue">Grades 8–12</div>
+          <div class="clinic-time">🕛 12:00 PM – 2:30 PM</div>
+        </div>
+        <div class="clinic-spots">⚠ Only 15 spots per group</div>
+        <a href="https://form.jotform.com/261406948653061" target="_blank" class="btn-primary" style="display:block;text-align:center;margin-top:20px;font-size:15px;padding:13px;">Register — $100 →</a>
+      </div>
+    </div>
+
+    <!-- ⏸ UPCOMING — July 18 (hidden) -->
+    <div class="clinic-card" data-deadline="2026-07-15" style="display:none;">
+      <div class="clinic-card-header orange">
+        <div class="clinic-month">July 2026</div>
+        <div class="clinic-date-big">July 18</div>
+        <div class="clinic-deadline"></div>
+      </div>
+      <div class="clinic-card-body">
+        <div class="clinic-session">
+          <div class="clinic-session-tag">Grades 3–7</div>
+          <div class="clinic-time">🕘 9:00 AM – 11:30 AM</div>
+        </div>
+        <div class="clinic-session" style="margin-top:12px;">
+          <div class="clinic-session-tag blue">Grades 8–12</div>
+          <div class="clinic-time">🕛 12:00 PM – 2:30 PM</div>
+        </div>
+        <div class="clinic-spots">⚠ Only 15 spots per group</div>
+        <a href="https://form.jotform.com/261406948653061" target="_blank" class="btn-primary" style="display:block;text-align:center;margin-top:20px;font-size:15px;padding:13px;">Register — $100 →</a>
+      </div>
+    </div>
+
+    <!-- ⏸ UPCOMING — August 1 (hidden) -->
+    <div class="clinic-card" data-deadline="2026-07-29" style="display:none;">
+      <div class="clinic-card-header blue-header">
+        <div class="clinic-month">August 2026</div>
+        <div class="clinic-date-big">August 1</div>
+        <div class="clinic-deadline"></div>
+      </div>
+      <div class="clinic-card-body">
+        <div class="clinic-session">
+          <div class="clinic-session-tag">Grades 3–7</div>
+          <div class="clinic-time">🕘 9:00 AM – 11:30 AM</div>
+        </div>
+        <div class="clinic-session" style="margin-top:12px;">
+          <div class="clinic-session-tag blue">Grades 8–12</div>
+          <div class="clinic-time">🕛 12:00 PM – 2:30 PM</div>
+        </div>
+        <div class="clinic-spots">⚠ Only 15 spots per group</div>
+        <a href="https://form.jotform.com/261406948653061" target="_blank" class="btn-primary" style="display:block;text-align:center;margin-top:20px;font-size:15px;padding:13px;">Register — $100 →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- WHAT'S INCLUDED -->
+  <div class="reveal" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;margin-bottom:40px;">
+    <div class="clinic-include-card"><div style="font-size:28px;margin-bottom:8px;">⏱</div><div class="clinic-include-title">2.5 Hours</div><div class="clinic-include-sub">of Training</div></div>
+    <div class="clinic-include-card"><div style="font-size:28px;margin-bottom:8px;">🏀</div><div class="clinic-include-title">Skill Development</div><div class="clinic-include-sub">& Competitions</div></div>
+    <div class="clinic-include-card"><div style="font-size:28px;margin-bottom:8px;">📋</div><div class="clinic-include-title">Athlete</div><div class="clinic-include-sub">Assessment</div></div>
+    <div class="clinic-include-card"><div style="font-size:28px;margin-bottom:8px;">👕</div><div class="clinic-include-title">Free TSA</div><div class="clinic-include-sub">T-Shirt Included</div></div>
+    <div class="clinic-include-card"><div style="font-size:28px;margin-bottom:8px;">📱</div><div class="clinic-include-title">Digital</div><div class="clinic-include-sub">Skill Guide</div></div>
+  </div>
+
+  <!-- PRICING BAR -->
+  <div class="reveal" style="background:linear-gradient(135deg,var(--blue),#0d2d5e);border:1px solid rgba(97,214,249,0.2);border-radius:12px;padding:32px 36px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;">
+    <div>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--slate);margin-bottom:4px;">Investment</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:56px;color:var(--orange);line-height:1;letter-spacing:2px;">$100 <span style="font-size:22px;color:var(--slate);">per athlete</span></div>
+      <div style="font-size:14px;color:rgba(255,255,255,0.6);margin-top:4px;">Includes free TSA t-shirt + digital skill guide • Only 15 spots per group</div>
+    </div>
+    <div style="text-align:right;">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:1px;color:var(--white);margin-bottom:8px;">Register before the deadline — spots go fast</div>
+      <a href="https://form.jotform.com/261406948653061" target="_blank" class="btn-primary">Register for Clinic →</a>
+    </div>
+  </div>
+
+  <!-- FLYER -->
+  <div class="reveal" style="margin-top:48px;text-align:center;">
+    <p style="font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--slate);margin-bottom:16px;">Latest Clinic Flyer</p>
+    <img src="clinic-flyer.png" alt="TSA Foundation Clinic" style="max-width:480px;width:100%;border-radius:12px;border:1px solid rgba(97,214,249,0.15);" />
   </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about">
-  <div class="about-visual reveal">
-    <div style="position:relative;margin-bottom:24px;">
-      <img
-        src="coach-carter.jpg"
-        alt="Coach Carter — Trinity Sports & Athletics"
-        style="width:100%;border-radius:12px;display:block;object-fit:cover;max-height:480px;object-position:top;"
-      />
-      <!-- overlay badge -->
-      <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(3,18,51,0.95) 0%,transparent 100%);border-radius:0 0 12px 12px;padding:28px 24px 20px;">
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:2px;color:var(--white);">Coach Carter</div>
-        <div style="font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--orange);">Founder & Head Coach — Trinity Sports & Athletics</div>
-      </div>
-    </div>
-    <div class="about-quote-block">
-      <p class="about-quote">"To train, mentor, and inspire the next generation to reach their fullest potential for Christ through sports."</p>
-    </div>
-    <div class="about-stats">
-      <div class="stat-box">
-        <div class="stat-num">Multi</div>
-        <div class="stat-label">Country Pro Career</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num">NE</div>
-        <div class="stat-label">Arkansas-Based</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num">D1</div>
-        <div class="stat-label">Walk-On Athlete</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num">EFA</div>
-        <div class="stat-label">Approved Vendor</div>
-      </div>
-    </div>
-  </div>
-  <div class="about-text reveal" style="transition-delay:0.15s;">
-    <p class="section-label">Our Story</p>
-    <h2 class="section-title">Meet <span class="accent">Coach Carter</span></h2>
-    <p>Coach Carter's journey is a testament to <strong>hard work, faith, and perseverance.</strong> Despite never playing organized basketball growing up, he defied the odds by walking on at Saint Francis College — proving that dedication and relentless effort can open any door.</p>
-    <p>His talent and work ethic took him beyond college basketball, leading to a <strong>professional career across multiple countries</strong> where he honed his skills and deepened his passion for the game.</p>
-    <div class="mission-line">He turned down the NBA G League to answer a greater calling — serving the youth of Northeast Arkansas.</div>
-    <p>Now, through Trinity Sports & Athletics, Coach Carter is committed to developing athletes on and off the court, <strong>instilling discipline, confidence, and a mindset for success</strong> in every young athlete he trains.</p>
-    <a href="https://form.jotform.com/261406948653061" target="_blank" class="btn-primary" style="margin-top:8px;">Train With Us</a>
-  </div>
-</section>
+<style>
+  .clinic-card {
+    background: rgba(3,18,51,0.8);
+    border: 1px solid rgba(97,214,249,0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .clinic-card:hover { border-color: var(--orange); transform: translateY(-4px); }
+  .clinic-card-header { padding: 20px 24px 16px; position: relative; }
+  .clinic-card-header.orange { background: var(--orange); }
+  .clinic-card-header.blue-header { background: var(--blue); border-bottom: 3px solid var(--orange); }
+  .clinic-month { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; opacity: 0.7; margin-bottom: 2px; }
+  .orange .clinic-month { color: var(--navy); }
+  .blue-header .clinic-month { color: rgba(255,255,255,0.6); }
+  .clinic-date-big { font-family: 'Bebas Neue', sans-serif; font-size: 44px; letter-spacing: 2px; line-height: 1; }
+  .orange .clinic-date-big { color: var(--navy); }
+  .blue-header .clinic-date-big { color: var(--white); }
+  .clinic-deadline { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1px; margin-top: 6px; }
+  .orange .clinic-deadline { color: rgba(3,18,51,0.7); }
+  .blue-header .clinic-deadline { color: rgba(255,255,255,0.6); }
+  .clinic-card-body { padding: 20px 24px 24px; }
+  .clinic-session { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .clinic-session-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--orange); color: var(--navy); padding: 4px 10px; border-radius: 3px; }
+  .clinic-session-tag.blue { background: var(--blue); color: var(--white); }
+  .clinic-time { font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 1px; color: var(--sky); }
+  .clinic-spots { font-size: 13px; color: var(--orange); font-weight: 600; margin-top: 16px; }
+  .clinic-include-card { background: rgba(3,18,51,0.6); border: 1px solid rgba(97,214,249,0.15); border-radius: 8px; padding: 20px; text-align: center; }
+  .clinic-include-title { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--orange); margin-bottom: 4px; }
+  .clinic-include-sub { font-size: 12px; color: var(--slate); }
+  .clinic-card.expired { opacity: 0.4; pointer-events: none; }
+  .clinic-card.sold-out .btn-primary { background: var(--slate); cursor: not-allowed; }
+</style>
+
+<script>
+  // Auto-countdown and expiry for clinic cards
+  (function() {
+    const cards = document.querySelectorAll('.clinic-card');
+    cards.forEach(function(card, i) {
+      const deadlineStr = card.getAttribute('data-deadline');
+      if (!deadlineStr) return;
+      const deadline = new Date(deadlineStr + 'T23:59:59');
+      const now = new Date();
+      const deadlineEl = card.querySelector('.clinic-deadline');
+      if (now > deadline) {
+        card.classList.add('expired');
+        if (deadlineEl) deadlineEl.textContent = 'Registration Closed';
+        const btn = card.querySelector('.btn-primary');
+        if (btn) { btn.textContent = 'Registration Closed'; btn.style.background = 'var(--slate)'; btn.style.pointerEvents = 'none'; }
+      } else {
+        const diff = deadline - now;
+        const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+        if (deadlineEl) {
+          if (days <= 3) { deadlineEl.textContent = '🔴 ' + days + ' day' + (days === 1 ? '' : 's') + ' left to register'; }
+          else { deadlineEl.textContent = 'Register by ' + deadline.toLocaleDateString('en-US', { month: 'long', day: 'numeric' }); }
+        }
+      }
+    });
+    // Hide section entirely if all cards expired
+    const allExpired = Array.from(cards).every(c => c.classList.contains('expired'));
+    if (allExpired) {
+      const section = document.getElementById('clinic');
+      if (section) {
+        section.innerHTML = section.innerHTML; // keep structure
+        const grid = document.getElementById('clinic-grid');
+        if (grid) grid.innerHTML = '<p style="color:var(--slate);font-size:17px;padding:24px 0;">No clinics currently scheduled. Check back soon or <a href="#email-capture" style="color:var(--sky);">subscribe for updates</a>.</p>';
+      }
+    }
+  })();
+</script>
+
+
 
 <!-- CLASS SCHEDULE / REGISTER -->
 <section id="classes">
@@ -1345,6 +1473,129 @@
 </section>
 
 
+<!-- SERVICES -->
+<section id="services">
+  <div class="reveal">
+    <p class="section-label">What We Offer</p>
+    <h2 class="section-title">Our <span class="accent">Services</span></h2>
+  </div>
+
+  <div class="services-grid reveal">
+
+    <div class="service-card">
+      <div class="service-number">01</div>
+      <div class="service-icon">🏆</div>
+      <h3 class="service-title">Private/Semi-Private Training</h3>
+      <p class="service-desc">Elevate your game with our 1-hour private/semi-private training sessions. Get the personalized coaching you need while training in a competitive, high-energy environment.</p>
+      <p class="service-desc">Improve skills, build confidence, and take your performance to the next level. Train with purpose. Compete with excellence.</p>
+      <ul class="service-details" style="margin-bottom:20px;">
+        <li>8 sessions/month — $310/month</li>
+        <li>4 sessions/month — $210/month</li>
+        <li>Sibling discount available</li>
+      </ul>
+      <a href="https://form.jotform.com/261406948653061" target="_blank" class="btn-primary" style="font-size:14px;padding:12px 24px;">Book a Session</a>
+    </div>
+
+    <div class="service-card">
+      <div class="service-number">02</div>
+      <div class="service-icon">⚡</div>
+      <h3 class="service-title">Group Classes</h3>
+      <p class="service-desc">Small group training focused on skill development, game IQ, and building confident, competitive athletes. Capped at <strong style="color:#fff">15 athletes per class</strong> for personalized coaching in a high-energy environment.</p>
+      <ul class="service-details">
+        <li>Youth Development (Grades 3–7) &nbsp;|&nbsp; Tue & Thu — 9:00 AM</li>
+        <li>Competitive Development (Grades 8–12) &nbsp;|&nbsp; Wed & Fri — 9:00 AM</li>
+        <li>$160/month &nbsp;|&nbsp; Sibling discount: $110/month</li>
+        <li>Classes begin May 26, 2026</li>
+        <li>Limited spots — register early</li>
+      </ul>
+    </div>
+
+    <div class="service-card" style="border-right:none;">
+      <div class="service-number">03</div>
+      <div class="service-icon">🎯</div>
+      <h3 class="service-title">Develop Your Skills</h3>
+      <div class="sports-row">
+        <span class="sport-tag">Basketball</span>
+        <span class="sport-tag">Football</span>
+        <span class="sport-tag">Soccer</span>
+        <span class="sport-tag">Volleyball</span>
+        <span class="sport-tag">Track</span>
+      </div>
+      <div class="pillars-grid" style="grid-template-columns:1fr 1fr;gap:14px;margin-top:0;">
+        <div class="pillar-card" style="padding:20px;">
+          <div class="pillar-icon">💨</div>
+          <div class="pillar-title" style="font-size:15px;">Speed & Agility</div>
+          <p class="pillar-desc" style="font-size:13px;">Explosive quickness, reaction time, and athletic performance.</p>
+        </div>
+        <div class="pillar-card" style="padding:20px;">
+          <div class="pillar-icon">💪</div>
+          <div class="pillar-title" style="font-size:15px;">Strength & Conditioning</div>
+          <p class="pillar-desc" style="font-size:13px;">Build the physical foundation every serious athlete needs to perform at their best.</p>
+        </div>
+        <div class="pillar-card" style="padding:20px;">
+          <div class="pillar-icon">🔄</div>
+          <div class="pillar-title" style="font-size:15px;">Recovery & Injury Prevention</div>
+          <p class="pillar-desc" style="font-size:13px;">Mobility, stretching, and functional movement to stay strong.</p>
+        </div>
+        <div class="pillar-card" style="padding:20px;">
+          <div class="pillar-icon">🌟</div>
+          <div class="pillar-title" style="font-size:15px;">Tailored Training</div>
+          <p class="pillar-desc" style="font-size:13px;">Customized to your goals — speed, skill, or endurance.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-visual reveal">
+    <div style="position:relative;margin-bottom:24px;">
+      <img
+        src="coach-carter.jpg"
+        alt="Coach Carter — Trinity Sports & Athletics"
+        style="width:100%;border-radius:12px;display:block;object-fit:cover;max-height:480px;object-position:top;"
+      />
+      <!-- overlay badge -->
+      <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(3,18,51,0.95) 0%,transparent 100%);border-radius:0 0 12px 12px;padding:28px 24px 20px;">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:2px;color:var(--white);">Coach Carter</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--orange);">Founder & Head Coach — Trinity Sports & Athletics</div>
+      </div>
+    </div>
+    <div class="about-quote-block">
+      <p class="about-quote">"To train, mentor, and inspire the next generation to reach their fullest potential for Christ through sports."</p>
+    </div>
+    <div class="about-stats">
+      <div class="stat-box">
+        <div class="stat-num">Multi</div>
+        <div class="stat-label">Country Pro Career</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">NE</div>
+        <div class="stat-label">Arkansas-Based</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">D1</div>
+        <div class="stat-label">Walk-On Athlete</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">EFA</div>
+        <div class="stat-label">Approved Vendor</div>
+      </div>
+    </div>
+  </div>
+  <div class="about-text reveal" style="transition-delay:0.15s;">
+    <p class="section-label">Our Story</p>
+    <h2 class="section-title">Meet <span class="accent">Coach Carter</span></h2>
+    <p>Coach Carter's journey is a testament to <strong>hard work, faith, and perseverance.</strong> Despite never playing organized basketball growing up, he defied the odds by walking on at Saint Francis College — proving that dedication and relentless effort can open any door.</p>
+    <p>His talent and work ethic took him beyond college basketball, leading to a <strong>professional career across multiple countries</strong> where he honed his skills and deepened his passion for the game.</p>
+    <div class="mission-line">He turned down the NBA G League to answer a greater calling — serving the youth of Northeast Arkansas.</div>
+    <p>Now, through Trinity Sports & Athletics, Coach Carter is committed to developing athletes on and off the court, <strong>instilling discipline, confidence, and a mindset for success</strong> in every young athlete he trains.</p>
+    <a href="https://form.jotform.com/261406948653061" target="_blank" class="btn-primary" style="margin-top:8px;">Train With Us</a>
+  </div>
+</section>
+
 <!-- PROMOS -->
 <section id="promo">
   <div class="reveal">
@@ -1365,7 +1616,7 @@
 
     <div class="promo-card standard reveal" style="transition-delay:0.1s;">
       <div class="promo-card-inner">
-        <span class="promo-badge">🏆 Elite</span>
+        <span class="promo-badge">🏆 1-on-1</span>
         <h3 class="promo-title">Private/Semi-Private Training</h3>
         <p class="promo-desc">8 sessions/month for $310 or 4 sessions/month for $210. Personalized 1-hour sessions with Coach Carter tailored to your athlete's sport and goals.</p>
         <a href="https://form.jotform.com/261406948653061" target="_blank" class="btn-outline-white">Register Now</a>
@@ -1383,16 +1634,59 @@
   </div>
 </section>
 
+<!-- MERCH / SHOP -->
+<section id="shop" style="padding:var(--section-pad);background:#020e28;">
+  <div class="reveal">
+    <p class="section-label">TSA Gear</p>
+    <h2 class="section-title">Rep the <span class="accent">Brand</span></h2>
+    <p style="color:var(--slate);font-size:17px;max-width:560px;line-height:1.7;">Official Trinity Sports & Athletics gear. Pre-sale orders open now — order yours before the deadline and pick up at training.</p>
+  </div>
+  <div class="reveal" style="margin-top:48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;">
+    <div style="background:rgba(3,18,51,0.8);border:1px solid rgba(97,214,249,0.15);border-radius:12px;padding:32px;text-align:center;transition:border-color 0.3s;" onmouseover="this.style.borderColor='var(--orange)'" onmouseout="this.style.borderColor='rgba(97,214,249,0.15)'">
+      <div style="font-size:40px;margin-bottom:16px;">👕</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:1px;margin-bottom:8px;">Short Sleeve Tee</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--orange);margin-bottom:16px;">$25</div>
+      <div style="font-size:13px;color:var(--slate);margin-bottom:20px;">Youth S–XL | Adult S–3XL</div>
+    </div>
+    <div style="background:rgba(3,18,51,0.8);border:1px solid rgba(97,214,249,0.15);border-radius:12px;padding:32px;text-align:center;transition:border-color 0.3s;" onmouseover="this.style.borderColor='var(--orange)'" onmouseout="this.style.borderColor='rgba(97,214,249,0.15)'">
+      <div style="font-size:40px;margin-bottom:16px;">👕</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:1px;margin-bottom:8px;">Long Sleeve Tee</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--orange);margin-bottom:16px;">$30</div>
+      <div style="font-size:13px;color:var(--slate);margin-bottom:20px;">Youth S–XL | Adult S–3XL</div>
+    </div>
+    <div style="background:var(--orange);border:1px solid var(--orange);border-radius:12px;padding:32px;text-align:center;position:relative;">
+      <div style="position:absolute;top:12px;right:12px;background:rgba(3,18,51,0.25);color:var(--navy);font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;padding:4px 10px;border-radius:3px;text-transform:uppercase;">Popular</div>
+      <div style="font-size:40px;margin-bottom:16px;">🧥</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:1px;margin-bottom:8px;color:var(--navy);">Hoodie</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--navy);margin-bottom:16px;">$45</div>
+      <div style="font-size:13px;color:rgba(3,18,51,0.7);margin-bottom:20px;">Youth S–XL | Adult S–3XL</div>
+    </div>
+    <div style="background:rgba(3,18,51,0.8);border:1px solid rgba(97,214,249,0.15);border-radius:12px;padding:32px;text-align:center;transition:border-color 0.3s;" onmouseover="this.style.borderColor='var(--orange)'" onmouseout="this.style.borderColor='rgba(97,214,249,0.15)'">
+      <div style="font-size:40px;margin-bottom:16px;">🩳</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:1px;margin-bottom:8px;">Shorts</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--orange);margin-bottom:16px;">$30</div>
+      <div style="font-size:13px;color:var(--slate);margin-bottom:20px;">Youth S–XL | Adult S–3XL</div>
+    </div>
+  </div>
+  <div class="reveal" style="margin-top:36px;background:var(--blue);border-radius:8px;padding:28px 36px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;">
+    <div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:1px;color:var(--white);">Pre-Sale Orders Open Now</div>
+      <div style="font-size:15px;color:rgba(255,255,255,0.65);margin-top:4px;">Order before the deadline — pickup at training.</div>
+    </div>
+    <a href="https://form.jotform.com/261406948653061" target="_blank" class="btn-primary">Order Now</a>
+  </div>
+</section>
+
 <!-- EMAIL CAPTURE -->
 <section id="email-capture">
   <div class="email-capture-inner reveal">
     <h2 class="email-capture-title">Stay in the <span class="accent">Game</span></h2>
     <p class="email-capture-sub">Get updates on class schedules, training tips, special offers, and announcements from Trinity Sports & Athletics delivered to your inbox.</p>
-    <div class="email-form">
+    <div class="email-form" id="mc-form">
       <input type="email" placeholder="Enter your email address" id="email-input" />
       <button onclick="handleEmail()">Subscribe</button>
     </div>
-    <p class="email-fine">No spam, ever. Unsubscribe anytime. We respect your privacy.</p>
+    <p class="email-fine" id="email-msg">No spam, ever. Unsubscribe anytime. We respect your privacy.</p>
   </div>
 </section>
 
@@ -1411,11 +1705,12 @@
     <div>
       <p class="footer-col-title">Quick Links</p>
       <ul class="footer-links">
+        <li><a href="#clinic">Foundation Clinic</a></li>
+        <li><a href="#classes">Class Schedule</a></li>
+        <li><a href="https://form.jotform.com/261406948653061" target="_blank">Register Now</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#about">About Coach Carter</a></li>
-        <li><a href="#classes">Class Schedule</a></li>
-        <li><a href="https://form.jotform.com/261406948653061" target="_blank">Register</a></li>
-        <li><a href="#promo">Current Offers</a></li>
+        <li><a href="#shop">Merch Shop</a></li>
       </ul>
     </div>
     <div>
@@ -1470,24 +1765,60 @@
     }, 4000);
   }
 
-  // Email capture
-  function handleEmail() {
+  // Mailchimp email signup — routed through Netlify Function (API key stays private)
+  async function handleEmail() {
     const input = document.getElementById('email-input');
     const btn = input.nextElementSibling;
-    if (!input.value || !input.value.includes('@')) {
+    const msg = document.getElementById('email-msg');
+    const email = input.value.trim();
+
+    if (!email || !email.includes('@')) {
       input.style.borderColor = '#fb9429';
       setTimeout(() => input.style.borderColor = '', 2000);
       return;
     }
-    btn.textContent = '✓ Subscribed!';
-    btn.style.background = '#61d6f9';
+
+    btn.textContent = 'Subscribing...';
     btn.disabled = true;
-    input.value = '';
-    setTimeout(() => {
-      btn.textContent = 'Subscribe';
-      btn.style.background = '';
+
+    try {
+      const response = await fetch('/.netlify/functions/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email })
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        btn.textContent = '✓ Subscribed!';
+        btn.style.background = '#61d6f9';
+        msg.textContent = "You're on the list! We'll be in touch.";
+        msg.style.color = '#61d6f9';
+        input.value = '';
+        setTimeout(() => {
+          btn.textContent = 'Subscribe';
+          btn.style.background = '';
+          btn.disabled = false;
+          msg.textContent = "No spam, ever. Unsubscribe anytime. We respect your privacy.";
+          msg.style.color = '';
+        }, 5000);
+      } else {
+        throw new Error(data.error || 'Signup failed');
+      }
+    } catch (err) {
+      btn.textContent = 'Try Again';
+      btn.style.background = '#fb9429';
       btn.disabled = false;
-    }, 4000);
+      msg.textContent = 'Something went wrong. Please try again or contact us directly.';
+      msg.style.color = '#fb9429';
+      setTimeout(() => {
+        btn.textContent = 'Subscribe';
+        btn.style.background = '';
+        msg.textContent = "No spam, ever. Unsubscribe anytime. We respect your privacy.";
+        msg.style.color = '';
+      }, 4000);
+    }
   }
 </script>
 </body>
